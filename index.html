@@ -3,15 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Type Atlas | 西文字体历史博物馆</title>
+    <title>全球字体历史</title>
     <meta
       name="description"
-      content="通过时间线、代表字体、字形预览与使用建议，系统了解西文字体的发展历史。"
+      content="按文字体系与国家地区传统理解不同字体的历史来源、代表风格与使用场景。"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;700;800&family=Noto+Sans+Devanagari:wght@400;500;700&family=Noto+Sans+Khmer:wght@400;500;700&family=Noto+Sans+Lao:wght@400;500;700&family=Noto+Sans+Myanmar:wght@400;500;700&family=Noto+Sans+Thai:wght@400;500;700&family=Noto+Serif+Devanagari:wght@400;500;700&family=Noto+Serif+Khmer:wght@400;500;700&family=Noto+Serif+Lao:wght@400;500;700&family=Noto+Serif+Myanmar:wght@400;500;700&family=Noto+Serif+Thai:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles.css" />
@@ -23,88 +23,57 @@
           <div class="section-head">
             <div>
               <p class="section-kicker">Timeline</p>
-              <h2>西文字体发展的关键时代</h2>
+              <h2>全球字体历史</h2>
             </div>
-            <div class="filters" id="filters"></div>
+            <p class="section-credit">Design by Joelqiu</p>
           </div>
+          <div class="timeline-controls">
+            <div class="timeline-tabs-shell">
+              <div class="timeline-tabs-viewport" id="timelineTabsViewport">
+                <div class="timeline-tabs" id="timelineTabs"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="country-board">
+            <div class="country-tabs" id="countryTabs"></div>
+          </div>
+
           <div class="era-grid" id="eras"></div>
-        </section>
-
-        <section class="compare-board">
-          <div class="section-head">
-            <div>
-              <p class="section-kicker">Preview Lab</p>
-              <h2>用同一句文字，比较不同风格的气质差异</h2>
-            </div>
-          </div>
-          <div class="preview-panel">
-            <label for="previewText">预览文本</label>
-            <input
-              id="previewText"
-              type="text"
-              value="Typography reveals the spirit of its time."
-            />
-            <div class="preview-list" id="previewList"></div>
-          </div>
-        </section>
-
-        <section class="notes-board">
-          <div class="section-head">
-            <div>
-              <p class="section-kicker">Field Notes</p>
-              <h2>学习和使用西文字体时，最容易忽略的几个问题</h2>
-            </div>
-          </div>
-          <div class="notes-grid">
-            <article>
-              <h3>不要只按“高级感”选字体</h3>
-              <p>字体的历史背景和媒介属性会影响其语气。Didot 在时尚杂志里优雅，在长文界面里却可能显得过于紧绷。</p>
-            </article>
-            <article>
-              <h3>注意字重和字号的真实表现</h3>
-              <p>同一字体在屏幕和印刷中的表现不同，细衬线体在低分辨率下容易断裂，现代体尤其明显。</p>
-            </article>
-            <article>
-              <h3>理解分类，不要被分类限制</h3>
-              <p>“旧式体”“过渡体”“无衬线”是理解的入口，不是绝对边界。很多数字字体会跨越多种历史特征。</p>
-            </article>
-            <article>
-              <h3>看完整字族而不只看标题字</h3>
-              <p>真实项目里需要斜体、小型大写、数字样式和多语言支持，代表作不一定等于最好用的工作字体。</p>
-            </article>
-          </div>
         </section>
       </main>
     </div>
 
     <template id="eraCardTemplate">
       <article class="era-card">
-        <div class="era-meta">
-          <span class="era-period"></span>
-          <span class="era-tag"></span>
-        </div>
-        <div class="era-content">
+        <div class="era-head">
+          <div class="era-head-meta">
+            <span class="era-period"></span>
+            <span class="era-tag">
+              <span class="era-tag-raw"></span>
+              <span class="era-tag-zh"></span>
+            </span>
+          </div>
           <h3 class="era-title"></h3>
-          <p class="era-summary"></p>
-          <dl class="era-details">
-            <div>
-              <dt>历史起源</dt>
-              <dd class="origin"></dd>
-            </div>
-            <div>
-              <dt>代表字体</dt>
-              <dd class="faces"></dd>
-            </div>
-            <div>
-              <dt>使用场景</dt>
-              <dd class="usage"></dd>
-            </div>
-            <div>
-              <dt>使用注意</dt>
-              <dd class="caution"></dd>
-            </div>
-          </dl>
         </div>
+        <dl class="era-info-grid">
+          <div class="era-info-card">
+            <dt>背景与用途</dt>
+            <dd class="overview"></dd>
+          </div>
+          <div class="era-info-card">
+            <dt>使用提醒</dt>
+            <dd class="caution"></dd>
+          </div>
+          <div class="era-info-card era-info-card-faces">
+            <dt>代表字体</dt>
+            <div class="faces"></div>
+          </div>
+          <div class="era-info-card era-info-card-faces">
+            <dt>结构特征</dt>
+            <div class="era-structure-tags"></div>
+          </div>
+        </dl>
       </article>
     </template>
 
