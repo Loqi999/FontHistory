@@ -414,7 +414,7 @@ const timelineSystems = [
         eras: [
           {
             period: "19 世纪末至今",
-            title: "Nepali Devanagari",
+            title: "नेपाली देवनागरी",
             tag: "Regional application",
             tagZh: "尼泊尔语天城文",
             structureTags: ["公共信息", "教育阅读", "区域变体", "高频实用"],
@@ -438,7 +438,7 @@ const timelineSystems = [
         eras: [
           {
             period: "19 世纪学术排印至今",
-            title: "Scholarly Devanagari",
+            title: "शास्त्रीय देवनागरी",
             tag: "Classical text tradition",
             structureTags: ["学术传承", "经典文本", "复杂附标", "校勘友好"],
             titleFont: '"Noto Serif Devanagari", serif',
