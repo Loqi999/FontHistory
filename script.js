@@ -1208,16 +1208,7 @@ function getPreviewLetterSpacing(label, optionIndex, titleText) {
 }
 
 function createFaceOptions(era) {
-  const defaultLabel = extractPrimaryFontLabel(era.titleFont);
-  const options = [
-    {
-      label: defaultLabel,
-      fontFamily: era.titleFont,
-      fontStyle: "normal",
-      fontWeight: "700",
-      letterSpacing: "0em",
-    },
-  ];
+  const options = [];
 
   createFaceItems(era.faces).forEach((label) => {
     if (options.some((option) => option.label === label)) {
@@ -1234,6 +1225,18 @@ function createFaceOptions(era) {
       letterSpacing: getPreviewLetterSpacing(label, optionIndex, era.title),
     });
   });
+
+  if (options.length === 0) {
+    const fallbackLabel = extractPrimaryFontLabel(era.titleFont);
+
+    options.push({
+      label: fallbackLabel,
+      fontFamily: era.titleFont,
+      fontStyle: "normal",
+      fontWeight: "700",
+      letterSpacing: "0em",
+    });
+  }
 
   return options;
 }
@@ -1340,12 +1343,13 @@ function renderEraCards() {
     const titleElement = fragment.querySelector(".era-title");
     const titleScriptClass = getTitleScriptClass(era.title);
     const faceOptions = createFaceOptions(era);
+    const initialFace = faceOptions[0];
 
     titleElement.textContent = era.title;
-    titleElement.style.fontFamily = era.titleFont;
-    titleElement.style.fontStyle = "normal";
-    titleElement.style.fontWeight = "700";
-    titleElement.style.letterSpacing = "0em";
+    titleElement.style.fontFamily = initialFace.fontFamily;
+    titleElement.style.fontStyle = initialFace.fontStyle;
+    titleElement.style.fontWeight = initialFace.fontWeight;
+    titleElement.style.letterSpacing = initialFace.letterSpacing;
 
     if (titleScriptClass) {
       titleElement.classList.add(titleScriptClass);
