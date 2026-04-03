@@ -959,7 +959,13 @@ const fontPreviewStacks = {
   Pyidaungsu: 'Pyidaungsu, "Noto Sans Myanmar", sans-serif',
 };
 
+const systemsWithSharedOverview = new Set(["latin", "arabic", "devanagari"]);
+
 const systemsWithOverview = timelineSystems.map((system) => {
+  if (!systemsWithSharedOverview.has(system.id)) {
+    return system;
+  }
+
   const overviewEras = system.featuredCountries.flatMap((country) =>
     country.eras.map((era) => ({
       ...era,
