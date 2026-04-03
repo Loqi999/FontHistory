@@ -4,15 +4,15 @@ const timelineSystems = [
     name: "Latin",
     caption: "拉丁字母",
     summary:
-      "拉丁字母适合先按典型国家传统来理解，因为真正影响今天字体气质的，往往是意大利、法国、德国、瑞士、美国这些历史路径。",
+      "拉丁字母既可以按国家传统理解，也要看清一条完整历史链：碑铭与手写前史、小写形成、文艺复兴活字、古典与现代衬线、工业展示字、现代主义无衬线，再到数字界面与可变字体。",
     featuredCountries: [
       {
         id: "italy",
         name: "意大利",
         role: "文艺复兴源头",
-        summary: "先看意大利，最容易看懂拉丁字母如何从手写与碑铭进入早期活字排印。",
-        highlight: "Humanist、Jenson、早期 Roman types",
-        focus: "看手写笔势怎样变成正文秩序，理解旧式体的起点。",
+        summary: "先看意大利，最容易看懂拉丁字母如何从碑铭、手写与抄本传统进入早期活字排印。",
+        highlight: "碑铭传统、uncial、Humanist、Jenson",
+        focus: "看大写原型和手写传统怎样慢慢长成后来的 roman 与 italic。",
         eras: [
           {
             period: "公元前 1 世纪 - 公元 5 世纪",
@@ -28,6 +28,19 @@ const timelineSystems = [
             caution: "这是大写碑铭传统，不要把它误当成带现代小写系统的一般正文字体。",
           },
           {
+            period: "4 世纪 - 8 世纪",
+            title: "Uncial / Half-Uncial",
+            tag: "Manuscript minuscule",
+            structureTags: ["圆笔手写", "早期小写化", "抄本传统", "从书写到字母系统"],
+            titleFont: 'Georgia, "Times New Roman", serif',
+            summary: "在碑铭大写之外，晚期古典到早期中世纪的 uncial 与 half-uncial 让拉丁字母逐渐走向更适合连续书写的小写系统。",
+            origin:
+              "它们常见于基督教抄本与晚期拉丁书写，重点不是几何纪念性，而是圆润、连贯和更适合长文誊写的节奏。",
+            faces: "Uncial Antiqua、Caudex、Junius",
+            usage: "适合解释现代拉丁小写并非凭空出现，也适合历史书写、宗教抄本和中世纪语境展示。",
+            caution: "它是手写与抄本前史，不应被直接等同于后来的正文 roman type。",
+          },
+          {
             period: "15 世纪中叶 - 16 世纪",
             title: "Romano Umanistico",
             tag: "Early roman type",
@@ -39,6 +52,8 @@ const timelineSystems = [
             faces: "Jenson、Bembo、Centaur",
             usage: "适合书籍正文、文化出版、需要经典可信感的版面。",
             caution: "数码复刻差异很大，同名旧式体未必都保留人文味道。",
+            distinguish:
+              "和后来的 Garamond、Baskerville 比，先看 O 的斜向应力更明显、e 的横杠常带轻微上扬、衬线过渡更软，整体像还留着宽笔书写的转折。",
           },
           {
             period: "16 世纪初至今",
@@ -59,11 +74,24 @@ const timelineSystems = [
       {
         id: "france",
         name: "法国",
-        role: "古典与现代体",
-        summary: "法国路径适合解释拉丁字体如何从优雅正文走向高对比的编辑时尚感。",
-        highlight: "Garamond、Didot、法式古典排版",
-        focus: "看古典理性怎样一步步推到现代体的戏剧化对比。",
+        role: "小写秩序与古典理性",
+        summary: "法国路径适合解释小写秩序怎样成熟，并一路把拉丁字体推向古典理性与现代体。",
+        highlight: "Carolingian、Garamond、Romain du Roi、Didot",
+        focus: "看抄本小写、古典正文和理性化比例如何逐步连成一条线。",
         eras: [
+          {
+            period: "8 世纪末 - 12 世纪",
+            title: "Caroline Minuscule",
+            tag: "Carolingian minuscule",
+            structureTags: ["清晰小写", "词间分隔", "抄本标准化", "后世小写基础"],
+            titleFont: 'Georgia, "Times New Roman", serif',
+            summary: "Carolingian minuscule 是现代拉丁小写系统最关键的前史之一，它把字母写法推向更清晰、统一和易读的方向。",
+            origin:
+              "加洛林改革推动书写标准化，词间分隔、字母比例与抄本秩序被显著强化，后来的文艺复兴人文主义者也会把它重新发现并吸收进活字设计。",
+            faces: "Carolingia、Kingthings Petrock、Andron Scriptor",
+            usage: "适合解释现代小写字母、书籍阅读秩序和文艺复兴 roman 的深层来源。",
+            caution: "它不是成熟印刷字体，而是抄本书写规范；它的重要性在于结构史，而不是今天直接拿来做正文。",
+          },
           {
             period: "16 世纪 - 17 世纪",
             title: "Romain de la Renaissance",
@@ -76,6 +104,8 @@ const timelineSystems = [
             faces: "Garamond、Sabon、EB Garamond",
             usage: "适合文化品牌、长文排版、学术出版。",
             caution: "过度追求优雅容易牺牲屏幕环境下的小字号稳定性。",
+            distinguish:
+              "和意大利早期 roman 比，它更均衡、节奏更细腻；和 Baskerville 比，对比更低、O 的应力更斜、e 的眼更小，衬线连接也更柔和。",
           },
           {
             period: "18 世纪末 - 19 世纪初",
@@ -89,6 +119,8 @@ const timelineSystems = [
             faces: "Didot、HTF Didot、GFS Didot",
             usage: "适合杂志标题、品牌主视觉、海报。",
             caution: "小字号和低分辨率下很容易丢细节，不适合默认当通用正文。",
+            distinguish:
+              "最容易看的点是高对比、垂直轴和极细横画；和 Baskerville 比，Didot 的 O 更接近垂直应力，衬线更细更直，n 和 h 的肩部也更冷峻。",
           },
           {
             period: "17 世纪末 - 18 世纪",
@@ -103,6 +135,33 @@ const timelineSystems = [
             faces: "Fournier、Spectral、Kepler",
             usage: "适合文化编辑、正文与标题之间的中间层级，以及想要古典但不过分华丽的项目。",
             caution: "它没有 Didot 那么戏剧化，更适合节制、理性的编辑感，而不是高时尚感。",
+            distinguish:
+              "如果 Garamond、Baskerville、Didot 看起来太近，可以把它当中间层：对比开始增强，但还没到 Didot 那么极端；e 的横杠更平，轴线更正，整体更像被理性校准过。",
+          },
+        ],
+      },
+      {
+        id: "netherlands",
+        name: "尼德兰",
+        role: "旧式体与报刊正文",
+        summary: "尼德兰传统适合解释旧式衬线怎样从文艺复兴书卷气，转向更实用、更紧凑的商业和出版正文。",
+        highlight: "Dutch Oldstyle、Elzevir、Plantin",
+        focus: "看正文 serif 怎样变得更务实、更适合高密度阅读与商业印刷。",
+        eras: [
+          {
+            period: "16 世纪末 - 18 世纪",
+            title: "Dutch Oldstyle",
+            tag: "Dutch oldstyle",
+            structureTags: ["旧式衬线", "紧凑字面", "出版实用", "商业排印"],
+            titleFont: 'Georgia, "Times New Roman", serif',
+            summary: "尼德兰旧式体把 Garalde 的细腻书卷气拉向更紧凑、更耐用的出版正文，是现代书籍和报刊 serif 的重要过渡层。",
+            origin:
+              "低地国家的商业印刷和国际出版网络推动字形朝更高效率、更稳定复制的方向发展，形成一批非常适合长期阅读的实用正文体。",
+            faces: "Plantin、DTL Elzevir、Lexicon",
+            usage: "适合书籍正文、报刊历史语境、博物馆出版和需要稳健阅读感的版面。",
+            caution: "它不像 Garamond 那样浪漫，也不像 Didot 那样戏剧化，讲解时要强调它的务实与耐读性。",
+            distinguish:
+              "和 Garamond 比，可先看字面更宽、更紧凑、x-height 往往更高，衬线和主笔画更扎实；它不像法国旧式体那样轻盈，而是明显朝报刊和商业正文靠拢。",
           },
         ],
       },
@@ -110,9 +169,9 @@ const timelineSystems = [
         id: "germany",
         name: "德国",
         role: "黑体字与工业转向",
-        summary: "德国是理解拉丁字体内部断裂感的关键入口，一边保留黑体字，一边走向工业无衬线。",
-        highlight: "Fraktur、Akzidenz-Grotesk、现代主义前夜",
-        focus: "看历史传统和工业现代性如何在同一文化里并存。",
+        summary: "德国是理解拉丁字体内部断裂感的关键入口，一边长期保留黑字传统，一边走向工业无衬线和现代主义几何构成。",
+        highlight: "Textura、Schwabacher、Fraktur、Akzidenz、Futura",
+        focus: "看黑字、Antiqua 与现代无衬线怎样在同一文化里长期拉扯。",
         eras: [
           {
             period: "13 世纪 - 20 世纪上半叶",
@@ -128,6 +187,20 @@ const timelineSystems = [
             caution: "讲解时应避免把所有黑字都混成一种风格，也不要把它们只当作暗黑装饰。",
           },
           {
+            period: "15 世纪末 - 16 世纪",
+            title: "Schwabacher",
+            tag: "Blackletter transition",
+            tagZh: "黑字过渡体",
+            structureTags: ["黑字分化", "更圆润", "德语印刷", "手写到印刷过渡"],
+            titleFont: 'Georgia, "Times New Roman", serif',
+            summary: "Schwabacher 处在 Textura 与 Fraktur 之间，能帮助用户理解黑字内部也有明显分化，而不是单一风格。",
+            origin:
+              "它保留黑字的密集结构，但比早期 Textura 更圆润、更接近印刷传播中的可用形态，也为后来的 Fraktur 普及提供了过渡。",
+            faces: "Walbaum-Fraktur、UnifrakturCook、Berthold Mainzer Fraktur",
+            usage: "适合解释德语区黑字内部演变、早期印刷和宗教改革时期的视觉语境。",
+            caution: "如果省略这层过渡，用户很容易把 Textura 和 Fraktur 误当成完全同一回事。",
+          },
+          {
             period: "19 世纪初 - 19 世纪末",
             title: "Grotesk",
             tag: "Early sans-serif",
@@ -139,6 +212,8 @@ const timelineSystems = [
             faces: "Akzidenz-Grotesk、Breite Grotesk、Monotype Grotesque",
             usage: "适合标识、海报、工业和交通信息系统。",
             caution: "若层级和字距控制不好，早期无衬线很容易显得生硬。",
+            distinguish:
+              "和 Helvetica/Univers 比，早期 grotesk 的字宽与端点处理更不统一，R 的腿、G 的开口、S 的重心都更有粗粝感，不会那么平滑中性。",
           },
           {
             period: "19 世纪 - 20 世纪上半叶",
@@ -150,9 +225,94 @@ const timelineSystems = [
             summary: "德国不只有黑字，Antiqua 与 Fraktur 的长期并行与争论，本身就是理解德语排印现代化的关键。",
             origin:
               "当人文主义 Roman 在欧洲扩散时，德国长期保留黑字传统；后来 Antiqua 才逐步成为出版和国际沟通里更稳定的方案。",
-            faces: "Walbaum、Times New Roman、Sabon",
+            faces: "Walbaum、Sabon、Palatino",
             usage: "适合说明德语区从黑字走向现代正文排版的历史过渡，也适合书籍与文化出版。",
             caution: "如果只讲 Fraktur 而不讲 Antiqua，用户会误以为德国拉丁字母史只剩黑字这条线。",
+            distinguish:
+              "这张卡的重点不是一套统一外形，而是 Roman 相对于黑字的阅读逻辑。真要看差异，可先抓连续曲线、开放字腔和更稳定的小写节奏，而不是黑字那种折角密度。",
+          },
+          {
+            period: "1920 年代 - 1930 年代",
+            title: "Geometric Sans",
+            tag: "Geometric sans",
+            structureTags: ["几何构成", "现代主义", "圆与直线骨架", "展示与品牌感强"],
+            titleFont: '"Futura PT", Helvetica, Arial, sans-serif',
+            summary: "德国现代主义把无衬线进一步推向几何化，Futura 一类字体让 sans 不再只是工业新奇物，而是现代生活方式的象征。",
+            origin:
+              "包豪斯与现代主义设计重视几何结构、普遍性和新工业时代的视觉秩序，于是无衬线开始拥有更强的抽象构成感。",
+            faces: "Futura、Erbar、Kabel",
+            usage: "适合品牌标题、海报、现代主义视觉、建筑与科技类传播。",
+            caution: "几何 sans 很有风格，但长文可读性和真实中性都有限，不能把它误当作万能无衬线。",
+            distinguish:
+              "先看接近圆规和直尺构成的感觉：O 很接近正圆，a 常是单层，笔画粗细变化小。和人文 sans 比，几何 sans 的字腔更规整，但阅读温度也更低。",
+          },
+        ],
+      },
+      {
+        id: "uk",
+        name: "英国",
+        role: "过渡体与工业展示字",
+        summary: "英国路径能把西文字型史里最常被漏掉的几段接上，包括过渡体、肥体、埃及体和人文无衬线。",
+        highlight: "Baskerville、Fat Face、Clarendon、Gill Sans",
+        focus: "看旧式衬线怎样过渡到现代体，并在工业广告时代爆发展示字革命。",
+        eras: [
+          {
+            period: "18 世纪中叶",
+            title: "Transitional Serif",
+            tag: "Transitional serif",
+            structureTags: ["旧式到现代过渡", "对比增强", "笔势减弱", "正文与标题兼容"],
+            titleFont: 'Baskerville, Georgia, "Times New Roman", serif',
+            summary: "Baskerville 代表的过渡体，是 Oldstyle 走向 Didone 的关键桥梁，也是很多西文字型史里必须单独指出的一站。",
+            origin:
+              "更高印刷精度和更强控制欲让字形开始减少手写痕迹、提升笔画对比与轮廓清晰度，但仍保留足够的正文可读性。",
+            faces: "Baskerville、Mrs Eaves、Libre Baskerville",
+            usage: "适合书籍标题、文化品牌、编辑排版，以及需要古典但更干净清晰的场景。",
+            caution: "如果没有这一段，用户会感觉 Garamond 直接跳到 Didot，历史上会显得过于断裂。",
+            distinguish:
+              "判断 Baskerville 一类最有用的线索是：对比比 Garamond 高，但还没像 Didot 那样锋利；O 的应力更接近垂直，e 的横杠更平，衬线也更利落。",
+          },
+          {
+            period: "19 世纪初",
+            title: "Fat Face",
+            tag: "Fat face display",
+            structureTags: ["高对比展示", "广告爆发", "海报标题", "商业冲击力"],
+            titleFont: '"Bodoni Moda", "Times New Roman", serif',
+            summary: "Fat Face 把现代体的高对比推向广告时代的夸张展示，是 19 世纪商业海报视觉爆炸的重要起点。",
+            origin:
+              "城市商业竞争和印刷广告扩张，让字体不再只服务书页，也必须在街头橱窗和海报上快速抓住注意力。",
+            faces: "Elephant、Bodoni Poster、Abril Fatface",
+            usage: "适合海报标题、品牌 campaign、复古广告风和需要强烈戏剧性的展示场景。",
+            caution: "它本质上是 display 逻辑，不适合承担正文，也不能替代普通 Didone 的编辑功能。",
+          },
+          {
+            period: "19 世纪上半叶 - 19 世纪末",
+            title: "Egyptian / Clarendon",
+            tag: "Slab serif",
+            structureTags: ["厚重衬线", "工业招牌", "目录广告", "强识别度"],
+            titleFont: '"Rockwell", Georgia, serif',
+            summary: "Slab Serif 与 Clarendon 让 serif 从书籍正文走进工业社会的目录、招牌和广告系统，是 19 世纪展示字革命的另一条主线。",
+            origin:
+              "当印刷进入商业街和商品世界，厚重而稳定的衬线更适合在复杂环境中保持识别度，也逐渐形成独立的广告和票据语气。",
+            faces: "Clarendon、Rockwell、Roboto Slab",
+            usage: "适合海报、副标题、品牌包装、西部与工业风视觉，以及需要扎实分量感的文字层级。",
+            caution: "它比普通 serif 更像展示和标识工具，长文使用时要谨慎控制字重与行距。",
+            distinguish:
+              "辨认 slab serif 最直接的方法就是看衬线厚度接近主笔画，几乎像把字母脚钉住；和普通 roman 比，明暗对比更弱，整体更像工业构件。",
+          },
+          {
+            period: "20 世纪上半叶",
+            title: "Humanist Sans",
+            tag: "Humanist sans",
+            structureTags: ["人文无衬线", "笔势余韵", "导视传统", "亲和现代"],
+            titleFont: '"Gill Sans", "Trebuchet MS", Verdana, sans-serif',
+            summary: "英国的人文无衬线把罗马碑铭和笔写节奏重新带回 sans 体系，让无衬线不只剩工业硬度或瑞士中性。",
+            origin:
+              "从 Johnston 到 Gill Sans，导视系统、公共交通和出版设计都在寻找一种更有文化温度、又足够现代的无衬线语言。",
+            faces: "Johnston Sans、Gill Sans、Transport",
+            usage: "适合文化机构、导视、编辑标题、教育出版和想要温和现代感的品牌。",
+            caution: "它不像 Helvetica 那样强调中性，项目里要把它当作有明确人格的人文 sans。",
+            distinguish:
+              "和 Helvetica 比，先看 a 常是双层、字腔更开、端点更像笔写切入，e 和 c 的开口也更明显；整体会更有人味，而不是被压到完全中性。",
           },
         ],
       },
@@ -160,9 +320,9 @@ const timelineSystems = [
         id: "switzerland",
         name: "瑞士",
         role: "国际主义设计",
-        summary: "瑞士最适合解释为什么现代设计这么爱“中性无衬线”和系统化网格。",
-        highlight: "Helvetica、Univers、Swiss Style",
-        focus: "看信息效率、秩序和中性如何变成国际视觉规范。",
+        summary: "瑞士最适合解释为什么现代设计这么爱“中性无衬线”、系统化家族和面向公共空间的导视秩序。",
+        highlight: "Helvetica、Univers、Frutiger、Swiss Style",
+        focus: "看信息效率、秩序和公共导视怎样变成国际视觉规范。",
         eras: [
           {
             period: "1950 年代至今",
@@ -176,6 +336,23 @@ const timelineSystems = [
             faces: "Helvetica、Univers、Neue Haas Grotesk",
             usage: "适合企业识别、导视、功能性界面和规范化信息设计。",
             caution: "中性并不等于对所有品牌都有效，容易带来冷感和同质化。",
+            distinguish:
+              "如果和 Akzidenz 或 Frutiger 混淆，可看字腔是否更收、端点是否更平整、笔画过渡是否更均匀。neo-grotesk 往往把个性削平，追求的是系统感和一致性。",
+          },
+          {
+            period: "1970 年代至今",
+            title: "Signage Humanist Sans",
+            tag: "Wayfinding sans",
+            structureTags: ["机场导视", "开放字腔", "远距识别", "公共信息系统"],
+            titleFont: '"Frutiger", Helvetica, Arial, sans-serif',
+            summary: "瑞士并不只有 Helvetica 式中性，Frutiger 一类导视 sans 代表的是更强调远距识别和公共空间可读性的另一条现代路径。",
+            origin:
+              "机场、交通和大型公共建筑要求字体在不同距离、速度与光线条件下都能稳定辨认，于是现代 sans 又发展出更开放、更人性化的识别逻辑。",
+            faces: "Frutiger、Frutiger Next、Avenir Next",
+            usage: "适合交通导视、公共信息系统、企业导视和需要清晰友好但不过分中性的界面。",
+            caution: "它和纯 neo-grotesk 不是同一判断标准，重点不是冷静中性，而是高识别和空间导航。",
+            distinguish:
+              "和 Helvetica 最大的差异通常在开口与识别性：a、e、s、c 更开，数字和字母更容易远距离区分，笔画也少一点被压平的机械感。",
           },
         ],
       },
@@ -183,9 +360,9 @@ const timelineSystems = [
         id: "usa",
         name: "美国",
         role: "新闻与数字系统",
-        summary: "美国路径更适合解释字体怎样从印刷媒体一路进入操作系统、办公软件和界面产品。",
-        highlight: "News Gothic、Cheltenham、系统字体传统",
-        focus: "看功能性和大规模传播需求怎样塑造现代字体选择。",
+        summary: "美国路径更适合解释字体怎样从报刊、办公系统和软件平台一路进入今天的屏幕阅读、开源字库与可变字体实践。",
+        highlight: "News Gothic、Century、Verdana、Georgia、Variable fonts",
+        focus: "看大规模传播与数字平台怎样塑造现代字体的默认选择。",
         eras: [
           {
             period: "19 世纪末 - 20 世纪中叶",
@@ -196,9 +373,26 @@ const timelineSystems = [
             summary: "美国新闻和出版体系把一批高效率报刊字体推成了大众熟悉的阅读语气，但这不等于它们都起源于美国。",
             origin:
               "报刊和商业出版需要稳定、经济、可复制的字形，于是适合高密度信息排版的字体长期占据中心位置。",
-            faces: "News Gothic、Cheltenham、Franklin Gothic",
+            faces: "News Gothic、Franklin Gothic、Trade Gothic",
             usage: "适合新闻、企业文档、说明文本和高密度信息页面。",
             caution: "它们常被当成“默认就安全”的选择，但品牌语气未必真的匹配。",
+            distinguish:
+              "三者都属于美式 gothic，但 Franklin Gothic 更厚更有标题力量，News Gothic 更窄更克制，Trade Gothic 的宽度变化更灵活。可先看字宽、粗细张力和小写 a、g 的紧凑程度。",
+          },
+          {
+            period: "20 世纪初 - 20 世纪中叶",
+            title: "Book and Scotch Roman",
+            tag: "Modern book serif",
+            structureTags: ["书籍正文", "报刊 serif", "稳定阅读", "现代出版标准"],
+            titleFont: 'Georgia, "Times New Roman", serif',
+            summary: "现代出版常见的正文 serif 并不只来自欧洲古典名作，美国出版与排字工业也把一批更务实的 book serif 推成长期标准。",
+            origin:
+              "学校教材、出版社和新闻系统需要耐用、清晰、成本可控的字形，于是 Scotch Roman、Century 一类路线长期影响英语世界的正文阅读习惯。",
+            faces: "Century Schoolbook、Bookman、Miller",
+            usage: "适合教材、说明书、长文排版和需要可靠阅读感的现代正文系统。",
+            caution: "它们常常气质低调，但正因为低调才适合做真正长期使用的正文基底。",
+            distinguish:
+              "和 Garamond/Baskerville 相比，这一路更看重字面、x-height 和连续阅读稳定性。你会看到更宽的比例、更大的 counters 和更保守的对比，而不是古典优雅的戏剧性。",
           },
           {
             period: "1990 年代至今",
@@ -212,6 +406,38 @@ const timelineSystems = [
             faces: "Verdana、Trebuchet MS、Tahoma、Segoe UI",
             usage: "适合网页、教育产品、企业系统和跨平台界面。",
             caution: "跨平台替换后气质可能明显变化，中英混排也要单独测试。",
+            distinguish:
+              "这类屏幕 sans 最值得看的是大 x-height、开口和易混字符区分。比如 Verdana 的字腔特别开，Tahoma 更紧更直，Segoe UI 则更圆润；重点不是历史味，而是像素环境下的清晰度。",
+          },
+          {
+            period: "1990 年代至今",
+            title: "Screen Reading Serif",
+            tag: "Screen serif",
+            structureTags: ["屏幕正文", "像素优化", "网页阅读", "电子文档"],
+            titleFont: 'Georgia, "Times New Roman", serif',
+            summary: "数字时代不只有 sans，Georgia 一类屏幕 serif 证明了正文阅读在显示器上也可以保有衬线的稳定节奏。",
+            origin:
+              "早期网页和办公文档需要在低分辨率屏幕上保持清晰阅读，因此出现了专门面向像素栅格优化的 serif 方案。",
+            faces: "Georgia、Merriweather、Charter",
+            usage: "适合博客、文档、电子书、知识型产品和需要更强正文语气的网页。",
+            caution: "屏幕 serif 的价值在于阅读体验，不在于复古气质；项目里不要只把它当装饰性 serif。",
+            distinguish:
+              "和传统书籍 serif 比，屏幕 serif 通常有更大的 x-height、更粗的细笔画和更开的 counters。先看小字号时 e、a、s 会不会糊在一起，这是它和古典 serif 最直接的差别。",
+          },
+          {
+            period: "2010 年代至今",
+            title: "Open Source and Variable",
+            tag: "Variable and open-source",
+            structureTags: ["开源字库", "多轴可变", "跨平台统一", "设计系统时代"],
+            titleFont: '"Inter", "Segoe UI", Tahoma, sans-serif',
+            summary: "今天的拉丁字体史已经进入设计系统时代，开源字库与 variable fonts 让字体从单个文件变成可调参数和产品基础设施。",
+            origin:
+              "Webfont 普及、响应式界面和跨平台产品需要更灵活的字重、宽度与光学尺寸控制，于是可变字体和大型开源家族成为当代主流基础设施。",
+            faces: "Inter、Roboto Flex、Recursive",
+            usage: "适合设计系统、产品界面、跨平台品牌、网页和需要统一多端语言风格的项目。",
+            caution: "可变字体并不自动等于更好，前提是浏览器支持、性能预算和排版策略都要跟上。",
+            distinguish:
+              "这一类的关键差异不只在静态外形，还在轴线能力。看它时除了 a、g、字腔这些常规细节，也要看 weight、width、slant、opsz 等轴是否完整，以及插值过程会不会失真。",
           },
         ],
       },
@@ -244,6 +470,8 @@ const timelineSystems = [
             faces: "Noto Kufi Arabic、Aref Kufi、Reem Kufi",
             usage: "适合纪念性标题、文化展陈、建筑图形。",
             caution: "它本质上偏展示和装饰传统，不适合承担现代长文正文。",
+            distinguish:
+              "和 Naskh、Ruq'ah 比，Kufic 最好认的是更方整、角化、横竖关系更强，很多字母的曲线会被压成几何块面，整体像建筑和碑刻语言。",
           },
           {
             period: "11 世纪至今",
@@ -258,6 +486,8 @@ const timelineSystems = [
             faces: "Aref Ruqaa、Amiri Quran、Noto Naskh Arabic",
             usage: "适合展陈标题、宗教文化项目、庄严题写和需要高仪式感的视觉场景。",
             caution: "它更偏大型展示与铭文传统，不能直接替代正文用的 Naskh 判断。",
+            distinguish:
+              "和正文 Naskh 比，Thuluth 的上伸和下垂更夸张、曲线更华丽、笔势起伏更大，适合远看和庄严题写，不是为了高密度连续阅读。",
           },
           {
             period: "10 世纪至今",
@@ -271,6 +501,8 @@ const timelineSystems = [
             faces: "Amiri、Traditional Arabic、Noto Naskh Arabic",
             usage: "适合书籍正文、新闻、教育内容和长时间阅读。",
             caution: "若正文想追求可靠可读性，通常应先从 Naskh 系判断。",
+            distinguish:
+              "辨认 Naskh 时先看整体是否圆润、字高和连接关系是否稳定、附标是否规整。它不像 Kufic 那样方，也不像 Nastaliq 那样整体下斜和层叠。",
           },
         ],
       },
@@ -294,6 +526,8 @@ const timelineSystems = [
             faces: "IranNastaliq、Awami Nastaliq、Urdu Nastaliq Unicode",
             usage: "适合诗歌、文化出版、强调波斯书写气质的内容。",
             caution: "数字排版复杂度明显高于 Naskh，不适合直接拿来当默认通用正文。",
+            distinguish:
+              "和 Naskh 最大的区别是整行明显向右下倾、字词会层叠下挂，基线不像正文体那样平稳，视觉上更像流动的诗性手写。",
           },
           {
             period: "20 世纪后期至今",
@@ -308,6 +542,8 @@ const timelineSystems = [
             faces: "Vazirmatn、Tahoma、Noto Naskh Arabic",
             usage: "适合现代波斯语新闻、界面、长文阅读和公共传播项目。",
             caution: "如果只把伊朗等同于 Nastaliq，会忽略大部分现代数字产品真正采用的正文字型路线。",
+            distinguish:
+              "这一路判断重点不是书法姿态，而是现代阅读性。可先看字腔更开、节奏更平、字重分配更均匀，整体比 Nastaliq 更像稳定工作的正文或界面字体。",
           },
         ],
       },
@@ -331,7 +567,9 @@ const timelineSystems = [
             faces: "Aref Ruqaa、Rakkas、Katibeh",
             usage: "适合说明奥斯曼行政书写、手写传统，以及后来标题和标识中更亲近的阿拉伯视觉表达。",
             caution:
-              "现代土耳其共和国在 1928 年后改用拉丁字母，因此这条线更适合作为历史语境，而不是现代土耳其现行字体分类。",
+              "它更适合短句标题、手写感标识和历史语境说明；如果拿去承担大段正文，节奏通常会显得太快、太碎。",
+            distinguish:
+              "Ruq'ah 比 Naskh 更扁、更快、更简化，很多字母转折会被压缩，行气更像日常手写批注，而不是书籍正文那种从容节奏。",
           },
         ],
       },
@@ -355,6 +593,8 @@ const timelineSystems = [
             faces: "Jameel Noori Nastaleeq、Mehr Nastaliq Web、Urdu Typesetting",
             usage: "适合乌尔都语文化出版、诗歌和传统视觉语境。",
             caution: "如果技术栈或字体支持不完整，版面很容易直接失控。",
+            distinguish:
+              "它和波斯 Nastaliq 接近，但通常层叠更密、字面更挤、报刊味更强。判断时先看字词是否像沿斜线一层层挂下去，以及附标和连接是否还能保持清楚。",
           },
         ],
       },
@@ -387,6 +627,8 @@ const timelineSystems = [
             faces: "Mukta、Hind、Kokila、Mangal",
             usage: "适合印地语、马拉地语等正文、界面与教育内容。",
             caution: "判断优劣时要先看附标定位、连字和字面节奏，而不只是看笔画风格。",
+            distinguish:
+              "看天城文时最有用的不是 serif/sans，而是先看上横线是否稳定、附标会不会乱跳、复杂连字是否挤坏字面，以及同一行的灰度是否均匀。",
           },
           {
             period: "20 世纪末至今",
@@ -401,6 +643,8 @@ const timelineSystems = [
             faces: "Mukta、Hind、Noto Sans Devanagari",
             usage: "适合海报、品牌主视觉、视频封面、App 标题和短文本传播场景。",
             caution: "展示型更容易牺牲长文节奏，不适合直接拿去排高密度正文。",
+            distinguish:
+              "和正文型相比，展示天城文常有更粗的主笔画、更紧的字面和更夸张的端部处理。先看短词是否够有冲击力，再看长句时是否开始发堵。",
           },
         ],
       },
@@ -425,6 +669,8 @@ const timelineSystems = [
             faces: "Noto Sans Devanagari、Mukta、Kalimati",
             usage: "适合公共导视、教育与政府信息传播。",
             caution: "不要把印度常用字体默认当成所有天城文语境都同样合适。",
+            distinguish:
+              "这里更该看公共传播稳定性，例如附标是否清楚、数字和标点是否协调、长词是否还能一眼扫读，而不是只看它像不像印度常见风格。",
           },
         ],
       },
@@ -448,6 +694,8 @@ const timelineSystems = [
             faces: "Sanskrit 2003、Chandas、Noto Serif Devanagari",
             usage: "适合宗教经典、学术出版、带注释的长文文本。",
             caution: "只看界面友好度往往不够，学术文本更依赖字符覆盖和排版细节。",
+            distinguish:
+              "学术用天城文先看字符覆盖、变音记号、组合附标和注释排法。真正的差别常不在粗细，而在复杂标记出现时版面会不会塌。",
           },
         ],
       },
@@ -480,6 +728,8 @@ const timelineSystems = [
             faces: "SimSun、Source Han Serif SC、Songti SC",
             usage: "适合图书、报刊、说明文本和正式长文内容。",
             caution: "中文阅读对灰度和字面很敏感，不同宋体在屏幕上表现差异很大。",
+            distinguish:
+              "中文宋体最值得先看的是横细竖粗比例、点画是否利落、字面松紧和整段灰度。别只盯单个字，要看一整段有没有发黑、发灰或忽松忽紧。",
           },
           {
             period: "20 世纪至今",
@@ -494,6 +744,8 @@ const timelineSystems = [
             faces: "FangSong、STFangsong、Source Han Serif SC",
             usage: "适合公文、档案、规范文件、技术材料和需要克制正式感的中文项目。",
             caution: "它并不等于“更文艺的宋体”，实际项目里更偏制度性和文件型气质。",
+            distinguish:
+              "和宋体比，仿宋常更细长、笔势更像写出来而不是刻出来，横竖对比没那么猛烈。你会感觉它更轻、更匀，也更像文件页而不是书页。",
           },
           {
             period: "20 世纪初至今",
@@ -507,6 +759,8 @@ const timelineSystems = [
             faces: "SimHei、Microsoft YaHei、Source Han Sans SC",
             usage: "适合 App、网页、系统界面、导视和标题。",
             caution: "常见问题是字面过满或灰度太重，小字号要特别小心。",
+            distinguish:
+              "中文黑体先看字面是否过满、转角是否发硬、圆角与直角比例是否协调。微软雅黑这类更圆润，思源黑体更中性，老黑体则更紧更重。",
           },
         ],
       },
@@ -530,6 +784,8 @@ const timelineSystems = [
             faces: "Yu Mincho、Hiragino Mincho、Source Han Serif JP",
             usage: "适合书刊、文学、品牌出版和需要文雅气质的长文。",
             caution: "如果假名设计不够细致，整体气质会立刻变差，不是只看汉字部分就够。",
+            distinguish:
+              "日文明朝体不要只看汉字，先看平假名和片假名是否细腻、大小关系是否舒服、长音和标点会不会跳。很多差异都藏在假名而不是汉字骨架里。",
           },
           {
             period: "20 世纪中叶至今",
@@ -543,6 +799,8 @@ const timelineSystems = [
             faces: "Yu Gothic、Hiragino Sans、Source Han Sans JP",
             usage: "适合网页、海报、包装、品牌识别和界面。",
             caution: "同样叫无衬线，日文和中文版本不能直接混着理解或替换。",
+            distinguish:
+              "判断日文无衬线时，先看假名是否够清楚、笔端是否太机械、横画和撇捺有没有失去日文节奏。和中文黑体相比，它更依赖假名的呼吸感。",
           },
           {
             period: "1960 年代至今",
@@ -581,6 +839,8 @@ const timelineSystems = [
             faces: "Batang、Nanum Myeongjo、Noto Serif KR",
             usage: "适合图书、正式说明和文化出版。",
             caution: "韩文不是简单的 CJK 同类项，字腔和节奏判断要单独做。",
+            distinguish:
+              "韩文明朝体先看字块内部留白、横细竖粗的强弱和收笔是否太尖。比起汉字 serif，它更像在方块内部处理元音和辅音的平衡。",
           },
           {
             period: "20 世纪末至今",
@@ -595,6 +855,8 @@ const timelineSystems = [
             faces: "Gungsuh、Batang、Nanum Myeongjo",
             usage: "适合证书、传统文化活动、纪念类视觉和需要正式书写感的韩文标题。",
             caution: "它的文化和仪式感很强，不适合默认用于现代产品界面或高频信息系统。",
+            distinguish:
+              "和普通 명조体 比，궁서体的笔势更像毛笔书写，弯钩、收笔和重心都更有礼仪感。你会觉得它在“写”，而不是在“排”。",
           },
           {
             period: "20 世纪至今",
@@ -608,6 +870,8 @@ const timelineSystems = [
             faces: "Malgun Gothic、Noto Sans KR、Pretendard",
             usage: "适合 App、网页、品牌系统和导视。",
             caution: "韩文的块面密度和字距容忍度与中文、日文都不完全一样。",
+            distinguish:
+              "韩文无衬线先看字块会不会发闷、元音竖画和横画是否清楚、字距是不是挤成一片。Pretendard 更当代均衡，Malgun 更系统字体取向。",
           },
         ],
       },
@@ -642,7 +906,9 @@ const timelineSystems = [
             faces: "Noto Serif Thai、Kinnari、TH Sarabun",
             usage: "适合做东南亚文字系统入门、解释字母结构来源和区域传播脉络。",
             caution:
-              "如果只把“泰国”当一级分类，会把国家、语言和书写系统混成一层，用户很容易误解它的历史位置。",
+              "这一类更适合拿来讲系统来源和结构，不适合直接代替现代正文或界面字体判断；真正落到项目时，通常还要继续区分有头体和无头体。",
+            distinguish:
+              "先看整体字母骨架、圈部、竖向节奏和附加位置，而不是先比较它像哪款现代字体。这张卡的重点是系统来源，不是风格微差。",
           },
           {
             period: "19 世纪末至今",
@@ -656,6 +922,8 @@ const timelineSystems = [
             faces: "TH Sarabun、Browallia、Noto Serif Thai",
             usage: "适合教材、政府文件、正式出版和需要清楚区分字形的正文。",
             caution: "如果只用西文眼光看，会误以为这些圈只是装饰，其实它们和辨识度密切相关。",
+            distinguish:
+              "有头泰文先看字头小圈是否清楚、大小是否一致，以及圈和主笔画有没有挤在一起。真正影响阅读的常常不是风格，而是这些圈能不能稳定分辨字母。",
           },
           {
             period: "20 世纪末至今",
@@ -669,6 +937,8 @@ const timelineSystems = [
             faces: "Sukhumvit Set、DB Helvethaica、Noto Sans Thai",
             usage: "适合 App、网页、品牌标题、导视和现代广告。",
             caution: "无头体更现代，但并不自动等于更适合长文；正式和教育语境要谨慎判断。",
+            distinguish:
+              "无头泰文的关键不是“没圈”，而是简化后还能不能保持字母区别。看它时要特别留意相近字形会不会因为去圈而变得太像。",
           },
           {
             period: "21 世纪至今",
@@ -682,6 +952,8 @@ const timelineSystems = [
             faces: "TH Sarabun、Sukhumvit Set、Noto Sans Thai",
             usage: "适合做字体选型教学、品牌策略说明和跨文化设计判断。",
             caution: "如果把无头体简单等同于“更高级”，或把有头体当成“更老派”，都很容易误判。",
+            distinguish:
+              "快速判断时先问自己：这是长文正式阅读还是现代传播标题？前者先看有头体的辨识稳定，后者再看无头体的紧凑和品牌气质。",
           },
         ],
       },
@@ -707,7 +979,9 @@ const timelineSystems = [
             faces: "Khmer OS、Noto Serif Khmer、MoolBoran",
             usage: "适合用来解释东南亚文字系统的历史层次，以及区域内部相互影响的路径。",
             caution:
-              "如果只把高棉当成“柬埔寨国家字体”，会忽略它在整个东南亚文字史里的枢纽作用。",
+              "这类历史型高棉更适合用来建立文字来源认知，不适合直接拿现代界面或正文的标准去评判；落到实际项目时，要另外看数字环境下的行距和密度表现。",
+            distinguish:
+              "先看曲线是否更饱满、纵向延展是否更强、整行是否需要更大的行距。它和现代高棉 sans 的差异，往往先体现在整段节奏而不是单字花样。",
           },
           {
             period: "20 世纪末至今",
@@ -723,6 +997,8 @@ const timelineSystems = [
             faces: "Noto Sans Khmer、Battambang、Kantumruy Pro",
             usage: "适合正文排版、文化展示、政府与教育资料，以及面向现代界面的高棉内容设计。",
             caution: "高棉字面和行距需求与拉丁体系差异很大，直接套西文排版参数容易出问题。",
+            distinguish:
+              "高棉现代字体先看曲线密度、上下延展和字面拥挤程度。很多差异体现在行距需求和整段灰度，不是只看单字轮廓。",
           },
         ],
       },
@@ -748,7 +1024,9 @@ const timelineSystems = [
             faces: "Phetsarath OT、Noto Serif Lao、DokChampa",
             usage: "适合说明东南亚近缘文字如何共享源流、却在国家与语言使用上各自独立。",
             caution:
-              "因为外观相近就把泰文和老挝文互相替代，会同时造成语言、文化和可读性层面的误判。",
+              "不要因为和泰文近缘就拿泰文字体直接替代；实际阅读里哪怕只差几个局部结构，也会明显影响熟悉度和可读性。",
+            distinguish:
+              "看这一类时先抓和泰文不同的局部字母结构、圈部位置和行内节奏。远看近似，不代表母语读者会把它当成同一套字。",
           },
           {
             period: "20 世纪末至今",
@@ -764,6 +1042,8 @@ const timelineSystems = [
             faces: "Noto Sans Lao、Saysettha OT、Phetsarath OT",
             usage: "适合政府信息、教育内容、移动界面和区域语言比较展示。",
             caution: "近缘不代表可以共用同一套字体资源，细部结构和用户阅读习惯仍需要分别处理。",
+            distinguish:
+              "老挝文和泰文近缘，但辨认时要看具体字母结构和行内节奏，不要只凭‘看起来差不多’。真正的差异常在局部笔画和阅读熟悉度上。",
           },
         ],
       },
@@ -789,6 +1069,8 @@ const timelineSystems = [
             faces: "Myanmar Text、Padauk、Noto Serif Myanmar",
             usage: "适合说明东南亚文字不仅有共同来源，也会因媒介与文化环境出现显著字形差异。",
             caution: "缅文的组合与排版复杂度较高，若只按西文或中日韩的经验处理，常会出现断行和显示问题。",
+            distinguish:
+              "缅文先看圆形骨架是否稳定、上下附加是否清楚，以及组合后有没有互相撞到。它的差异很多都出现在组合层，而不是基本字母单看时。",
           },
           {
             period: "21 世纪初至今",
@@ -804,6 +1086,8 @@ const timelineSystems = [
             faces: "Noto Sans Myanmar、Pyidaungsu、Padauk",
             usage: "适合新闻阅读、教育内容、政府系统和需要稳定显示的移动端界面。",
             caution: "如果技术栈对复杂脚本支持不足，再好的字形设计也可能在实际产品里失真。",
+            distinguish:
+              "现代缅文界面字体要先看复杂组合是否稳、字块会不会因为缩小而糊成一团。可读性的关键常在渲染结果，而不只是原始字形设计。",
           },
         ],
       },
@@ -822,14 +1106,27 @@ const previewTextInput = document.querySelector("#previewTextInput");
 
 const tagZhLabels = {
   "Roman square capitals": "罗马方形大写字母（图拉真体）",
+  "Manuscript minuscule": "抄本小写前史",
   "Early roman type": "早期罗马活字",
+  "Carolingian minuscule": "加洛林小写体",
   "Garalde tradition": "法国文艺复兴罗马体",
+  "Dutch oldstyle": "尼德兰旧式体",
   "Modern serif": "现代衬线体（迪多体）",
+  "Blackletter transition": "黑字过渡体",
   "Textura / Fraktur": "黑体字传统",
   "Early sans-serif": "早期无衬线",
+  "Geometric sans": "几何无衬线",
+  "Transitional serif": "过渡体衬线",
+  "Fat face display": "肥体展示字",
+  "Slab serif": "板状衬线体",
+  "Humanist sans": "人文无衬线",
   "Sans-serif": "无衬线体系",
+  "Wayfinding sans": "导视无衬线",
   "News and publishing": "报刊出版字体",
+  "Modern book serif": "现代书籍正文体",
   "Interface sans-serif": "界面无衬线",
+  "Screen serif": "屏幕正文衬线",
+  "Variable and open-source": "可变与开源字体",
   Kufic: "库法体",
   Naskh: "纳斯赫体",
   Nastaliq: "纳斯塔利克体",
@@ -854,40 +1151,85 @@ const fontPreviewStacks = {
   "Trajan Pro": '"Cinzel", "Marcellus SC", serif',
   Cinzel: '"Cinzel", "Marcellus SC", serif',
   "Marcellus SC": '"Cinzel", "Marcellus SC", serif',
+  "Uncial Antiqua": '"Uncial Antiqua", "Cormorant Garamond", serif',
+  Caudex: 'Caudex, "Uncial Antiqua", serif',
+  Junius: '"IM Fell English", Georgia, serif',
+  Omnes: 'Georgia, "Times New Roman", serif',
   Jenson: '"Cormorant Garamond", "EB Garamond", Georgia, serif',
   Bembo: '"EB Garamond", "Cormorant Garamond", Georgia, serif',
   "Bembo Italic": '"Cormorant Garamond", "EB Garamond", Georgia, serif',
   Centaur: 'Spectral, "Cormorant Garamond", Georgia, serif',
   "Centaur Italic": '"Cormorant Garamond", "EB Garamond", Georgia, serif',
+  Carolingia: '"Cormorant Garamond", Georgia, serif',
+  "Kingthings Petrock": '"Uncial Antiqua", Georgia, serif',
+  "Andron Scriptor": 'Georgia, "Times New Roman", serif',
   Garamond: '"Garamond", "EB Garamond", serif',
   Sabon: '"Sabon", "EB Garamond", serif',
   "EB Garamond": '"EB Garamond", "Garamond", serif',
   "EB Garamond Italic": '"EB Garamond", "Cormorant Garamond", serif',
+  Plantin: '"Spectral", Georgia, serif',
+  "DTL Elzevir": '"EB Garamond", Georgia, serif',
+  Lexicon: '"Source Serif 4", Georgia, serif',
   Didot: '"Bodoni Moda", "Playfair Display", serif',
   "HTF Didot": '"Bodoni Moda", "Playfair Display", serif',
   "GFS Didot": '"Bodoni Moda", "Playfair Display", serif',
   "Fette Fraktur": '"UnifrakturMaguntia", "Old English Text MT", serif',
   UnifrakturMaguntia: '"UnifrakturMaguntia", "Old English Text MT", serif',
+  UnifrakturCook: '"UnifrakturCook", "UnifrakturMaguntia", serif',
+  "Berthold Mainzer Fraktur": '"UnifrakturMaguntia", "Old English Text MT", serif',
   "Walbaum-Fraktur": '"UnifrakturMaguntia", "Old English Text MT", serif',
   "Akzidenz-Grotesk": '"Akzidenz-Grotesk", Helvetica, Arial, sans-serif',
   "Breite Grotesk": '"Akzidenz-Grotesk", Helvetica, Arial, sans-serif',
   "Monotype Grotesque": '"Monotype Grotesque", Helvetica, Arial, sans-serif',
+  Futura: '"Futura PT", "Century Gothic", Arial, sans-serif',
+  Erbar: '"Century Gothic", Arial, sans-serif',
+  Kabel: '"ITC Kabel", "Century Gothic", Arial, sans-serif',
   Helvetica: "Helvetica, Arial, sans-serif",
   Univers: '"Univers", Helvetica, Arial, sans-serif',
   "Neue Haas Grotesk": '"Neue Haas Grotesk", Helvetica, Arial, sans-serif',
   "Century Schoolbook": '"Century Schoolbook", Georgia, serif',
   "Times New Roman": '"Times New Roman", Georgia, serif',
+  Palatino: 'Palatino, "Book Antiqua", Georgia, serif',
   "News Gothic": '"News Gothic", "Franklin Gothic Medium", Arial, sans-serif',
+  "Trade Gothic": '"Trade Gothic", "Franklin Gothic Medium", Arial, sans-serif',
   Cheltenham: '"Playfair Display", Georgia, serif',
   "Franklin Gothic": '"Franklin Gothic Medium", Arial, sans-serif',
+  Baskerville: 'Baskerville, Georgia, serif',
+  "Mrs Eaves": '"Mrs Eaves", Baskerville, Georgia, serif',
+  "Libre Baskerville": '"Libre Baskerville", Baskerville, Georgia, serif',
+  Elephant: '"Playfair Display", "Bodoni Moda", serif',
+  "Abril Fatface": '"Abril Fatface", "Bodoni Moda", serif',
+  Braggadocio: 'Impact, fantasy',
+  "Bodoni Poster": '"Bodoni Moda", "Playfair Display", serif',
+  Clarendon: '"Clarendon", "Roboto Slab", Georgia, serif',
+  Rockwell: '"Rockwell", "Roboto Slab", Georgia, serif',
+  "Roboto Slab": '"Roboto Slab", Georgia, serif',
+  "Johnston Sans": '"Gill Sans", "Trebuchet MS", sans-serif',
+  "Gill Sans": '"Gill Sans", "Trebuchet MS", sans-serif',
+  Transport: 'Transport, "Gill Sans", "Trebuchet MS", sans-serif',
+  Optima: 'Optima, "Gill Sans", serif',
+  Frutiger: 'Frutiger, "Segoe UI", Tahoma, sans-serif',
+  "Frutiger Next": 'Frutiger, "Segoe UI", Tahoma, sans-serif',
+  Avenir: 'Avenir, "Segoe UI", Tahoma, sans-serif',
+  "Avenir Next": 'Avenir, "Segoe UI", Tahoma, sans-serif',
+  "FF DIN": '"DIN Alternate", "Bahnschrift", Arial, sans-serif',
+  Bookman: 'Bookman, Georgia, serif',
+  Miller: '"Source Serif 4", Georgia, serif',
   Fournier: 'Fournier, Baskerville, Georgia, serif',
   Spectral: 'Spectral, Georgia, serif',
   Kepler: 'Kepler, Baskerville, Georgia, serif',
   Walbaum: '"Playfair Display", "Bodoni Moda", "Times New Roman", serif',
+  Georgia: 'Georgia, "Times New Roman", serif',
+  Merriweather: 'Merriweather, Georgia, serif',
+  Charter: 'Charter, "Bitstream Charter", Georgia, serif',
   Verdana: "Verdana, sans-serif",
   "Trebuchet MS": '"Trebuchet MS", Verdana, sans-serif',
   Tahoma: "Tahoma, Verdana, sans-serif",
   "Segoe UI": '"Segoe UI", Tahoma, sans-serif',
+  Inter: 'Inter, "Segoe UI", Tahoma, sans-serif',
+  Recursive: 'Recursive, "Segoe UI", Tahoma, sans-serif',
+  "Roboto Flex": '"Roboto Flex", Roboto, Arial, sans-serif',
+  "Source Serif 4": '"Source Serif 4", Georgia, serif',
   "Noto Kufi Arabic": '"Noto Kufi Arabic", "Aref Kufi", sans-serif',
   "Aref Kufi": '"Noto Kufi Arabic", "Aref Ruqaa", sans-serif',
   "Reem Kufi": '"Reem Kufi", "Noto Kufi Arabic", sans-serif',
@@ -960,6 +1302,51 @@ const fontPreviewStacks = {
   "Noto Sans Myanmar": '"Noto Sans Myanmar", Pyidaungsu, sans-serif',
   Pyidaungsu: 'Pyidaungsu, "Noto Sans Myanmar", sans-serif',
 };
+
+const bundledWebFontFamilies = new Set([
+  "Aref Ruqaa",
+  "Bodoni Moda",
+  "Cinzel",
+  "Cormorant Garamond",
+  "EB Garamond",
+  "Katibeh",
+  "Manrope",
+  "Mukta",
+  "Noto Kufi Arabic",
+  "Noto Naskh Arabic",
+  "Noto Sans Devanagari",
+  "Noto Sans Khmer",
+  "Noto Sans Lao",
+  "Noto Sans Myanmar",
+  "Noto Sans Thai",
+  "Noto Serif Devanagari",
+  "Noto Serif Khmer",
+  "Noto Serif Lao",
+  "Noto Serif Myanmar",
+  "Noto Serif Thai",
+  "Playfair Display",
+  "Rakkas",
+  "Spectral",
+  "UnifrakturMaguntia",
+  "Vazirmatn",
+]);
+
+const genericFontFamilies = new Set([
+  "serif",
+  "sans-serif",
+  "monospace",
+  "cursive",
+  "fantasy",
+  "system-ui",
+  "ui-serif",
+  "ui-sans-serif",
+  "ui-monospace",
+  "emoji",
+  "math",
+  "fangsong",
+]);
+
+const fontAvailabilityCache = new Map();
 
 const systemsWithSharedOverview = new Set(["latin", "arabic", "devanagari"]);
 
@@ -1069,6 +1456,46 @@ function extractPrimaryFontLabel(fontFamily) {
   return firstFamily.replace(/^["']|["']$/g, "").trim();
 }
 
+function parseFontFamilies(fontFamily) {
+  return fontFamily
+    .split(",")
+    .map((family) => family.replace(/^["']|["']$/g, "").trim())
+    .filter(Boolean);
+}
+
+function getNonGenericFontFamilies(fontFamily) {
+  return parseFontFamilies(fontFamily).filter((family) => !genericFontFamilies.has(family));
+}
+
+function isFontFamilyAvailable(family) {
+  if (!family || genericFontFamilies.has(family)) {
+    return false;
+  }
+
+  if (bundledWebFontFamilies.has(family)) {
+    return true;
+  }
+
+  if (fontAvailabilityCache.has(family)) {
+    return fontAvailabilityCache.get(family);
+  }
+
+  const available = Boolean(document.fonts?.check?.(`16px "${family}"`));
+  fontAvailabilityCache.set(family, available);
+  return available;
+}
+
+function isFaceSelectable(label, fallbackFamily = "") {
+  const fontFamily = fontPreviewStacks[label] || getPreviewFontFamily(label, fallbackFamily);
+  const candidates = getNonGenericFontFamilies(fontFamily);
+
+  if (candidates.length === 0) {
+    return false;
+  }
+
+  return candidates.some((family) => isFontFamilyAvailable(family));
+}
+
 function dedupeItems(items) {
   return [...new Set(items.filter(Boolean))];
 }
@@ -1079,6 +1506,12 @@ const curatedFaceExpansions = {
 };
 
 const googleFontsFilterMap = {
+  "italy:Manuscript minuscule": {
+    lang: "en_Latn",
+    script: "Latn",
+    query: "uncial",
+    categoryFilter: "Serif:%2FSerif%2FDisplay",
+  },
   "italy:Early roman type": {
     lang: "en_Latn",
     script: "Latn",
@@ -1097,6 +1530,12 @@ const googleFontsFilterMap = {
     query: "garamond",
     categoryFilter: "Serif:%2FSerif%2FOld+Style+Garalde",
   },
+  "france:Carolingian minuscule": {
+    lang: "en_Latn",
+    script: "Latn",
+    query: "uncial",
+    categoryFilter: "Serif:%2FSerif%2FDisplay",
+  },
   "france:Modern serif": {
     lang: "en_Latn",
     script: "Latn",
@@ -1109,11 +1548,53 @@ const googleFontsFilterMap = {
     query: "baskerville",
     categoryFilter: "Serif:%2FSerif%2FTransitional",
   },
+  "netherlands:Dutch oldstyle": {
+    lang: "en_Latn",
+    script: "Latn",
+    query: "plantin",
+    categoryFilter: "Serif:%2FSerif%2FOld+Style+Garalde",
+  },
+  "germany:Blackletter transition": {
+    lang: "en_Latn",
+    script: "Latn",
+    query: "fraktur",
+    categoryFilter: "Serif:%2FSerif%2FDisplay",
+  },
   "germany:Roman / Antiqua": {
     lang: "en_Latn",
     script: "Latn",
     query: "old style serif",
     categoryFilter: "Serif:%2FSerif%2FOld+Style+Garalde",
+  },
+  "germany:Geometric sans": {
+    lang: "en_Latn",
+    script: "Latn",
+    query: "futura",
+    categoryFilter: "Sans+Serif:%2FSans%2FGeometric",
+  },
+  "uk:Transitional serif": {
+    lang: "en_Latn",
+    script: "Latn",
+    query: "baskerville",
+    categoryFilter: "Serif:%2FSerif%2FTransitional",
+  },
+  "uk:Fat face display": {
+    lang: "en_Latn",
+    script: "Latn",
+    query: "bodoni poster",
+    categoryFilter: "Serif:%2FSerif%2FDidone",
+  },
+  "uk:Slab serif": {
+    lang: "en_Latn",
+    script: "Latn",
+    query: "slab serif",
+    categoryFilter: "Serif:%2FSerif%2FSlab",
+  },
+  "uk:Humanist sans": {
+    lang: "en_Latn",
+    script: "Latn",
+    query: "gill sans",
+    categoryFilter: "Sans+Serif:%2FSans%2FHumanist",
   },
   "switzerland:Sans-serif": {
     lang: "en_Latn",
@@ -1121,11 +1602,35 @@ const googleFontsFilterMap = {
     query: "grotesk",
     categoryFilter: "Sans+Serif:%2FSans%2FNeo+Grotesk",
   },
+  "switzerland:Wayfinding sans": {
+    lang: "en_Latn",
+    script: "Latn",
+    query: "frutiger",
+    categoryFilter: "Sans+Serif:%2FSans%2FHumanist",
+  },
+  "usa:Modern book serif": {
+    lang: "en_Latn",
+    script: "Latn",
+    query: "book serif",
+    categoryFilter: "Serif:%2FSerif%2FTransitional",
+  },
   "usa:Interface sans-serif": {
     lang: "en_Latn",
     script: "Latn",
     query: "humanist sans",
     categoryFilter: "Sans+Serif:%2FSans%2FHumanist",
+  },
+  "usa:Screen serif": {
+    lang: "en_Latn",
+    script: "Latn",
+    query: "screen serif",
+    categoryFilter: "Serif:%2FSerif%2FTransitional",
+  },
+  "usa:Variable and open-source": {
+    lang: "en_Latn",
+    script: "Latn",
+    query: "variable font",
+    categoryFilter: "Sans+Serif:%2FSans%2F*",
   },
   "arab-world:Kufic": {
     lang: "ar_Arab",
@@ -1259,14 +1764,24 @@ const googleFontsFilterMap = {
 const googleFontsFamilySearchMap = {
   "Trajan Pro": "Cinzel",
   "Marcellus SC": "Marcellus SC",
+  "Uncial Antiqua": "Uncial Antiqua",
+  Caudex: "Caudex",
+  Junius: "uncial",
+  Omnes: "old style serif",
   Jenson: "Cormorant Garamond",
   Bembo: "Cormorant Garamond",
   "Bembo Italic": "Cormorant Garamond italic",
   Centaur: "Cormorant Garamond",
   "Centaur Italic": "Cormorant Garamond italic",
+  Carolingia: "uncial",
+  "Kingthings Petrock": "uncial",
+  "Andron Scriptor": "uncial",
   Garamond: "EB Garamond",
   Sabon: "EB Garamond",
   "EB Garamond Italic": "EB Garamond italic",
+  Plantin: "Spectral",
+  "DTL Elzevir": "old style serif",
+  Lexicon: "Source Serif 4",
   Didot: "Bodoni Moda",
   "HTF Didot": "Bodoni Moda",
   "GFS Didot": "Bodoni Moda",
@@ -1274,18 +1789,53 @@ const googleFontsFamilySearchMap = {
   Kepler: "Spectral",
   Walbaum: "Bodoni Moda",
   "Fette Fraktur": "UnifrakturMaguntia",
+  UnifrakturCook: "UnifrakturCook",
+  "Berthold Mainzer Fraktur": "fraktur",
   "Walbaum-Fraktur": "UnifrakturMaguntia",
   "Akzidenz-Grotesk": "neo grotesk",
   "Breite Grotesk": "neo grotesk",
   "Monotype Grotesque": "neo grotesk",
+  Futura: "geometric sans",
+  Erbar: "geometric sans",
+  Kabel: "geometric sans",
   Helvetica: "neo grotesk",
   Univers: "neo grotesk",
   "Neue Haas Grotesk": "neo grotesk",
   "News Gothic": "Libre Franklin",
+  "Trade Gothic": "trade gothic",
+  Palatino: "Palatino",
   Cheltenham: "Playfair Display",
   "Franklin Gothic": "Libre Franklin",
+  Baskerville: "Libre Baskerville",
+  "Mrs Eaves": "transitional serif",
+  "Libre Baskerville": "Libre Baskerville",
+  Elephant: "bodoni",
+  "Abril Fatface": "Abril Fatface",
+  Braggadocio: "display sans",
+  "Bodoni Poster": "Bodoni Moda",
+  Clarendon: "Roboto Slab",
+  Rockwell: "Roboto Slab",
+  "Roboto Slab": "Roboto Slab",
+  "Johnston Sans": "humanist sans",
+  "Gill Sans": "humanist sans",
+  Transport: "humanist sans",
+  Optima: "humanist sans",
+  Frutiger: "humanist sans",
+  "Frutiger Next": "humanist sans",
+  Avenir: "humanist sans",
+  "Avenir Next": "humanist sans",
+  "FF DIN": "din",
   "Trebuchet MS": "humanist sans",
   "Segoe UI": "humanist sans",
+  Bookman: "book serif",
+  Miller: "Source Serif 4",
+  Georgia: "Georgia",
+  Merriweather: "Merriweather",
+  Charter: "Charter",
+  Inter: "Inter",
+  Recursive: "Recursive",
+  "Roboto Flex": "Roboto Flex",
+  "Source Serif 4": "Source Serif 4",
   "Aref Kufi": "Noto Kufi Arabic",
   "Amiri Quran": "Amiri",
   "Traditional Arabic": "Noto Naskh Arabic",
@@ -1396,57 +1946,6 @@ function getEraFaceEnhancements(era, country) {
 
 function getEraFaceLabels(era, country) {
   return dedupeItems([...createFaceItems(era.faces), ...getEraFaceEnhancements(era, country)]);
-}
-
-function getGoogleFontsBrowseContext(era, country) {
-  const filter = googleFontsFilterMap[getEraKey(country, era)] || {};
-  const locale = googleFontsLocaleMap[country.id] || googleFontsLocaleMap.latin;
-  const queryCandidates = dedupeItems([
-    filter.query,
-    ...getEraFaceLabels(era, country).map(
-      (label) => googleFontsFamilySearchMap[label] || normalizeFontSearchLabel(label),
-    ),
-    googleFontsFamilySearchMap[extractPrimaryFontLabel(era.titleFont || "")],
-    normalizeFontSearchLabel(extractPrimaryFontLabel(era.titleFont || "")),
-    googleFontsFamilySearchMap[era.tagRaw || era.tag || era.title],
-    normalizeFontSearchLabel(era.tagRaw || era.tag || era.title || ""),
-  ]).filter(Boolean);
-  const query = queryCandidates[0];
-
-  if (!query) {
-    return null;
-  }
-
-  const preview = getPreviewTitleText(era);
-  const params = [
-    `lang=${filter.lang || locale.lang}`,
-    `script=${filter.script || locale.script}`,
-  ];
-
-  if (query) {
-    params.push(`query=${encodeURIComponent(query)}`);
-  }
-
-  if (filter.categoryFilter) {
-    params.push(`categoryFilters=${filter.categoryFilter}`);
-  } else if ((filter.script || locale.script) === "Latn") {
-    const styleCategory = getEraStyleCategory(era);
-
-    if (styleCategory === "sans") {
-      params.push("categoryFilters=Sans+Serif:%2FSans%2F*");
-    } else if (styleCategory === "serif") {
-      params.push("categoryFilters=Serif:%2FSerif%2F*");
-    }
-  }
-
-  if (preview) {
-    params.push(`preview.text=${encodeURIComponent(preview)}`);
-  }
-
-  return {
-    url: `https://fonts.google.com/?${params.join("&")}`,
-    label: "查看更多",
-  };
 }
 
 function getPreviewFontFamily(label, fallbackFamily = "") {
@@ -1606,6 +2105,7 @@ function createFaceOptions(era, country, titleText = era.title) {
       fontStyle: getPreviewFontStyle(label),
       fontWeight: getPreviewFontWeight(label, optionIndex, titleText),
       letterSpacing: getPreviewLetterSpacing(label, optionIndex, titleText),
+      selectable: isFaceSelectable(label, era.titleFont),
     });
   });
 
@@ -1618,6 +2118,7 @@ function createFaceOptions(era, country, titleText = era.title) {
       fontStyle: "normal",
       fontWeight: "700",
       letterSpacing: "0em",
+      selectable: isFaceSelectable(fallbackLabel, era.titleFont),
     });
   }
 
@@ -1680,8 +2181,19 @@ function createFaceChip(face, index, titleElement, facesRoot) {
   chip.style.letterSpacing = face.letterSpacing;
   chip.setAttribute("aria-pressed", index === 0 ? "true" : "false");
 
+  if (!face.selectable) {
+    chip.disabled = true;
+    chip.classList.add("is-unavailable");
+    chip.setAttribute("aria-disabled", "true");
+    chip.title = "当前设备未检测到该字体，暂不可切换";
+  }
+
   if (index === 0) {
     chip.classList.add("active");
+  }
+
+  if (!face.selectable) {
+    return chip;
   }
 
   chip.addEventListener("click", () => {
@@ -1706,21 +2218,20 @@ function createStructureTag(tag) {
   return chip;
 }
 
-function createMoreFontsLink(era, country) {
-  const browseContext = getGoogleFontsBrowseContext(era, country);
-
-  if (!browseContext) {
-    return null;
+function createCautionText(era) {
+  if (era.caution && era.distinguish) {
+    return `· ${era.caution}\n· 识别时可先看：${era.distinguish}`;
   }
 
-  const link = document.createElement("a");
-  link.className = "era-face era-face-more";
-  link.href = browseContext.url;
-  link.target = "_blank";
-  link.rel = "noreferrer";
-  link.textContent = browseContext.label;
-  link.setAttribute("aria-label", `${browseContext.label}（Google Fonts）`);
-  return link;
+  if (era.caution) {
+    return `· ${era.caution}`;
+  }
+
+  if (era.distinguish) {
+    return `· 识别时可先看：${era.distinguish}`;
+  }
+
+  return "";
 }
 
 function createEraCard(era, country) {
@@ -1734,7 +2245,8 @@ function createEraCard(era, country) {
   const previewTitle = getPreviewTitleText(era);
   const titleScriptClass = getTitleScriptClass(previewTitle);
   const faceOptions = createFaceOptions(era, country, previewTitle);
-  const initialFace = faceOptions[0];
+  const initialFace = faceOptions.find((face) => face.selectable) || faceOptions[0];
+  const initialFaceIndex = faceOptions.indexOf(initialFace);
 
   fragment.querySelector(".era-period").textContent = era.period;
   rawTag.textContent = era.tag;
@@ -1748,17 +2260,13 @@ function createEraCard(era, country) {
   }
 
   fragment.querySelector(".overview").textContent = createOverviewText(era);
-  fragment.querySelector(".caution").textContent = era.caution;
+  fragment.querySelector(".caution").textContent = createCautionText(era);
 
   faceOptions.forEach((face, index) => {
-    facesRoot.appendChild(createFaceChip(face, index, titleElement, facesRoot));
+    facesRoot.appendChild(
+      createFaceChip(face, index === initialFaceIndex ? 0 : -1, titleElement, facesRoot),
+    );
   });
-
-  const moreFontsLink = createMoreFontsLink(era, country);
-
-  if (moreFontsLink) {
-    facesRoot.appendChild(moreFontsLink);
-  }
 
   era.structureTags.forEach((tag) => {
     tagsRoot.appendChild(createStructureTag(tag));
@@ -1832,6 +2340,12 @@ function renderEraCards() {
   });
 }
 
+function renderApp() {
+  renderTimelineTabs();
+  renderCountryTabs();
+  renderEraCards();
+}
+
 function updateScrollButtons() {
   if (!prevButton || !nextButton) {
     return;
@@ -1859,6 +2373,8 @@ previewTextInput?.addEventListener("input", (event) => {
   renderEraCards();
 });
 
-renderTimelineTabs();
-renderCountryTabs();
-renderEraCards();
+renderApp();
+document.fonts?.ready?.then(() => {
+  fontAvailabilityCache.clear();
+  renderEraCards();
+});
