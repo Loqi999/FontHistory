@@ -992,6 +992,45 @@ const activeCountryBySystem = Object.fromEntries(
 
 let activeSystem = systemsWithOverview[0].id;
 
+const localTitleValidators = {
+  "arab-world": (title) => /[\u0600-\u06ff\u0750-\u077f\u08a0-\u08ff]/u.test(title),
+  iran: (title) => /[\u0600-\u06ff\u0750-\u077f\u08a0-\u08ff]/u.test(title),
+  ottoman: (title) => /[\u0600-\u06ff\u0750-\u077f\u08a0-\u08ff]/u.test(title),
+  urdu: (title) => /[\u0600-\u06ff\u0750-\u077f\u08a0-\u08ff]/u.test(title),
+  india: (title) => /[\u0900-\u097f]/u.test(title),
+  nepal: (title) => /[\u0900-\u097f]/u.test(title),
+  sanskrit: (title) => /[\u0900-\u097f]/u.test(title),
+  china: (title) => /[\u3400-\u9fff\uf900-\ufaff]/u.test(title),
+  japan: (title) => /[\u3040-\u30ff\u3400-\u9fff\uf900-\ufaff]/u.test(title),
+  korea: (title) => /[\u1100-\u11ff\u3130-\u318f\uac00-\ud7af]/u.test(title),
+  thailand: (title) => /[\u0e00-\u0e7f]/u.test(title),
+  cambodia: (title) => /[\u1780-\u17ff]/u.test(title),
+  laos: (title) => /[\u0e80-\u0eff]/u.test(title),
+  myanmar: (title) => /[\u1000-\u109f\uaa60-\uaa7f]/u.test(title),
+};
+
+function auditLocalTitles(systems) {
+  systems.forEach((system) => {
+    system.featuredCountries.forEach((country) => {
+      const validator = localTitleValidators[country.id];
+
+      if (!validator) {
+        return;
+      }
+
+      country.eras.forEach((era) => {
+        if (!validator(era.title)) {
+          console.warn(
+            `[FontHistory] Title should use local script for ${country.name}: "${era.title}"`,
+          );
+        }
+      });
+    });
+  });
+}
+
+auditLocalTitles(timelineSystems);
+
 function getActiveSystem() {
   return systemsWithOverview.find((item) => item.id === activeSystem) || systemsWithOverview[0];
 }
