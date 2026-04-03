@@ -27,16 +27,34 @@
             </div>
             <p class="section-credit">Design by Joelqiu</p>
           </div>
-          <div class="timeline-controls">
-            <div class="timeline-tabs-shell">
-              <div class="timeline-tabs-viewport" id="timelineTabsViewport">
-                <div class="timeline-tabs" id="timelineTabs"></div>
+          <div class="controls-dock">
+            <div class="timeline-controls">
+              <div class="controls-row controls-row-primary">
+                <div class="controls-group controls-group-primary">
+                  <div class="timeline-tabs-shell">
+                    <div class="timeline-tabs-viewport" id="timelineTabsViewport">
+                      <div class="timeline-tabs" id="timelineTabs"></div>
+                    </div>
+                  </div>
+                </div>
+                <label class="preview-input-panel" for="previewTextInput">
+                  <div class="preview-input-wrap">
+                    <span class="preview-input-prefix">Aa</span>
+                    <input
+                      id="previewTextInput"
+                      class="preview-text-input"
+                      type="text"
+                      placeholder="输入文字后预览"
+                      autocomplete="off"
+                      spellcheck="false"
+                    />
+                  </div>
+                </label>
+              </div>
+              <div class="country-board">
+                <div class="country-tabs" id="countryTabs"></div>
               </div>
             </div>
-          </div>
-
-          <div class="country-board">
-            <div class="country-tabs" id="countryTabs"></div>
           </div>
 
           <div class="era-grid" id="eras"></div>

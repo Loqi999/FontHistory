@@ -20,12 +20,12 @@ const timelineSystems = [
             tag: "Roman square capitals",
             structureTags: ["碑铭原型", "庄重纪念性", "大写字母系统", "几何骨架"],
             titleFont: 'Georgia, "Times New Roman", serif',
-            summary: "古罗马碑铭为后世拉丁字母的大写结构和比例美感提供了原型。",
+            summary: "Roman square capitals 是古罗马碑铭里的大写原型，也是后世拉丁标题字最常回头借气质的一条源头。",
             origin:
-              "石刻工艺与宽笔书写共同塑造了粗细变化、节奏与收笔方式，后世标题字常回到这里借气质。",
+              "它一边受到宽笔书写影响，一边被石刻工艺定型，所以笔画既有书写节奏，也有雕刻后的庄重和清晰边缘。",
             faces: "Trajan Pro、Cinzel、Marcellus SC",
             usage: "适合历史标题、文化机构视觉、纪念性海报和大写铭文场景。",
-            caution: "这是大写碑铭传统，不应被理解成自带现代小写的一般正文字体。",
+            caution: "这是大写碑铭传统，不要把它误当成带现代小写系统的一般正文字体。",
           },
           {
             period: "15 世纪中叶 - 16 世纪",
@@ -33,9 +33,9 @@ const timelineSystems = [
             tag: "Early roman type",
             structureTags: ["人文笔势", "低对比衬线", "斜向应力", "正文友好"],
             titleFont: 'Baskerville, Georgia, "Times New Roman", serif',
-            summary: "意大利的人文主义书写进入印刷后，形成了早期 Roman type 的核心范式，也是后世旧式体的重要源头。",
+            summary: "人文主义书写进入印刷后，逐渐形成了早期 Roman type 的范式，也是后世旧式正文体的重要源头。",
             origin:
-              "抄写传统与早期活字印刷在威尼斯等城市汇合，让书写气息和排版秩序首次稳定结合。",
+              "威尼斯等城市把抄写传统和早期活字印刷结合起来，让字形第一次同时拥有手写气息和稳定排版秩序。",
             faces: "Jenson、Bembo、Centaur",
             usage: "适合书籍正文、文化出版、需要经典可信感的版面。",
             caution: "数码复刻差异很大，同名旧式体未必都保留人文味道。",
@@ -49,7 +49,7 @@ const timelineSystems = [
             titleFont: 'Baskerville, Georgia, "Times New Roman", serif',
             summary: "意大利不仅提供了 Roman 正文字型，也提供了后世几乎所有拉丁排版都会用到的 italic 传统。",
             origin:
-              "Aldus Manutius 时代的斜体把书记官手写的快速节奏转进印刷，后来演变成拉丁排版里强调、引文和辅助层级的重要工具。",
+              "Aldus Manutius 时代把书记官手写里的快速斜势转进印刷，后来它逐渐变成强调、引文和辅助层级的重要工具。",
             faces: "Bembo Italic、Centaur Italic、EB Garamond Italic",
             usage: "适合引文、书名、题签、小块强调和需要文艺复兴书写感的版面。",
             caution: "斜体更适合承担辅助层级，而不是大段正文；项目里不要把它误当成独立正文系统。",
@@ -70,9 +70,9 @@ const timelineSystems = [
             tag: "Garalde tradition",
             structureTags: ["古典正文", "书卷气", "低对比衬线", "细腻节奏"],
             titleFont: 'Baskerville, Georgia, "Times New Roman", serif',
-            summary: "法国 Renaissance Roman 传统让 Garamond 一类字体成为经典正文与书籍气质的重要代表。",
+            summary: "法国 Renaissance Roman 传统让 Garamond 一类字体成为经典正文、书卷气和文化出版的代表。",
             origin:
-              "法式古典排印把旧式体推向更精致、更均衡的文字节奏，影响了长期的图书排版审美。",
+              "法式古典排印把旧式体推向更精致、更均衡的节奏，让它长期成为图书正文审美的重要标准。",
             faces: "Garamond、Sabon、EB Garamond",
             usage: "适合文化品牌、长文排版、学术出版。",
             caution: "过度追求优雅容易牺牲屏幕环境下的小字号稳定性。",
@@ -83,9 +83,9 @@ const timelineSystems = [
             tag: "Modern serif",
             structureTags: ["高对比笔画", "垂直轴线", "细直衬线", "时尚编辑感"],
             titleFont: 'Didot, "Times New Roman", serif',
-            summary: "法国现代体传统以 Didot 家族最为典型，把拉丁字体推向更高对比、更强秩序感和更显著的编辑气质。",
+            summary: "Didot 是法国现代体最典型的代表，把拉丁字体推向更高对比、更强秩序感和更鲜明的编辑时尚气质。",
             origin:
-              "纸张和印刷精度提升后，高对比与细衬线成为可实现的视觉语言，也带来了更强的编辑感。",
+              "纸张和印刷精度提升后，高对比和细衬线不再只是理想图样，而成为可稳定实现的视觉语言。",
             faces: "Didot、HTF Didot、GFS Didot",
             usage: "适合杂志标题、品牌主视觉、海报。",
             caution: "小字号和低分辨率下很容易丢细节，不适合默认当通用正文。",
@@ -97,12 +97,12 @@ const timelineSystems = [
             tagZh: "理性化罗马体",
             structureTags: ["国家规范化", "理性比例", "古典向现代过渡", "编辑秩序感"],
             titleFont: 'Baskerville, Georgia, "Times New Roman", serif',
-            summary: "在 Garamond 与 Didot 之间，法国还发展出更理性化、更受规范控制的 roman 方向，它是现代体出现前的重要过渡层。",
+            summary: "在 Garamond 与 Didot 之间，法国还发展出更理性化、规范化的 roman 方向，它是现代体出现前的重要过渡层。",
             origin:
-              "Romain du Roi 把字母从工匠个人手感进一步推向制度化和理性化，帮助法国排印走向更强的秩序与均衡。",
+              "Romain du Roi 把字母从工匠个人手感进一步推向制度化和理性比例，让法国排印走向更强的秩序与均衡。",
             faces: "Fournier、Spectral、Kepler",
             usage: "适合文化编辑、正文与标题之间的中间层级，以及想要古典但不过分华丽的项目。",
-            caution: "它不像 Didot 那样戏剧化，所以在品牌视觉里更像节制的编辑感，而不是高时尚感。",
+            caution: "它没有 Didot 那么戏剧化，更适合节制、理性的编辑感，而不是高时尚感。",
           },
         ],
       },
@@ -120,9 +120,9 @@ const timelineSystems = [
             tag: "Textura / Fraktur",
             structureTags: ["密集竖笔", "黑字传统", "书写到印刷延续", "文化身份强"],
             titleFont: 'Georgia, "Times New Roman", serif',
-            summary: "黑字传统在德语文化中长期保有正式性和文化身份象征，但 Textura 与 Fraktur 并不是完全同一阶段、同一用途的单一类别。",
+            summary: "黑字传统在德语文化中长期保有正式性和文化身份意味，但 Textura 与 Fraktur 并不是同一阶段、同一用途的单一类别。",
             origin:
-              "从中世纪抄写到近代印刷，德语区长期保留黑字传统，使其与 Roman/Antiqua 路径并行存在。",
+              "从中世纪抄写到近代印刷，德语区长期保留黑字传统，使它和 Roman / Antiqua 路径长期并行存在。",
             faces: "Fette Fraktur、UnifrakturMaguntia、Walbaum-Fraktur",
             usage: "适合历史叙事、传统工艺、强烈文化记忆型视觉。",
             caution: "讲解时应避免把所有黑字都混成一种风格，也不要把它们只当作暗黑装饰。",
@@ -133,9 +133,9 @@ const timelineSystems = [
             tag: "Early sans-serif",
             structureTags: ["早期无衬线", "工业气息", "节奏偏硬", "个性明显"],
             titleFont: '"Arial Narrow", Arial, sans-serif',
-            summary: "德国语境里的工业化和商业展示需求，推动了早期无衬线的普及与定型。",
+            summary: "工业化和商业展示需求推动了德语区早期无衬线的普及与定型。",
             origin:
-              "无衬线在这里最初并不追求中性，而是承载工业时代的新奇、效率和都市气息。",
+              "无衬线在这里最初并不追求“中性”，而是承载工业时代的新奇、效率和都市气息。",
             faces: "Akzidenz-Grotesk、Breite Grotesk、Monotype Grotesque",
             usage: "适合标识、海报、工业和交通信息系统。",
             caution: "若层级和字距控制不好，早期无衬线很容易显得生硬。",
@@ -149,7 +149,7 @@ const timelineSystems = [
             titleFont: 'Baskerville, Georgia, "Times New Roman", serif',
             summary: "德国不只有黑字，Antiqua 与 Fraktur 的长期并行与争论，本身就是理解德语排印现代化的关键。",
             origin:
-              "当人文主义 Roman 在欧洲扩散时，德国长期保留黑字传统；后来 Antiqua 逐步成为现代出版与国际沟通的更稳定方案。",
+              "当人文主义 Roman 在欧洲扩散时，德国长期保留黑字传统；后来 Antiqua 才逐步成为出版和国际沟通里更稳定的方案。",
             faces: "Walbaum、Times New Roman、Sabon",
             usage: "适合说明德语区从黑字走向现代正文排版的历史过渡，也适合书籍与文化出版。",
             caution: "如果只讲 Fraktur 而不讲 Antiqua，用户会误以为德国拉丁字母史只剩黑字这条线。",
@@ -198,7 +198,7 @@ const timelineSystems = [
               "报刊和商业出版需要稳定、经济、可复制的字形，于是适合高密度信息排版的字体长期占据中心位置。",
             faces: "News Gothic、Cheltenham、Franklin Gothic",
             usage: "适合新闻、企业文档、说明文本和高密度信息页面。",
-            caution: "它们常被误当作“默认就安全”，但品牌语气未必匹配。",
+            caution: "它们常被当成“默认就安全”的选择，但品牌语气未必真的匹配。",
           },
           {
             period: "1990 年代至今",
@@ -208,7 +208,7 @@ const timelineSystems = [
             titleFont: '"Trebuchet MS", Verdana, sans-serif',
             summary: "在数字产品和办公系统里，面向屏幕优化的无衬线成为美国软件和互联网界面的常见解法。",
             origin:
-              "屏幕阅读和跨平台使用推动字体从印刷逻辑转向界面逻辑，强调清晰、亲和和兼容性。",
+              "屏幕阅读和跨平台使用推动字体从印刷逻辑转向界面逻辑，更强调清晰、亲和和兼容性。",
             faces: "Verdana、Trebuchet MS、Tahoma、Segoe UI",
             usage: "适合网页、教育产品、企业系统和跨平台界面。",
             caution: "跨平台替换后气质可能明显变化，中英混排也要单独测试。",
@@ -222,7 +222,7 @@ const timelineSystems = [
     name: "العربية",
     caption: "阿拉伯字母",
     summary:
-      "阿拉伯字母更适合按语言文化圈和典型历史语境来理解，因为同一套字母在阿拉伯世界、伊朗、奥斯曼土耳其语环境和南亚会长出完全不同的视觉传统。",
+      "阿拉伯字母更适合按语言文化圈和历史语境来理解，因为同一套字母在阿拉伯世界、伊朗、奥斯曼语环境和南亚会长出完全不同的视觉传统。",
     featuredCountries: [
       {
         id: "arab-world",
@@ -243,7 +243,7 @@ const timelineSystems = [
               "它常与古兰经抄本和建筑装饰相关，强调稳定、方整和装饰化的节奏。",
             faces: "Noto Kufi Arabic、Aref Kufi、Reem Kufi",
             usage: "适合纪念性标题、文化展陈、建筑图形。",
-            caution: "更像展示和装饰传统，不适合承担现代长文正文。",
+            caution: "它本质上偏展示和装饰传统，不适合承担现代长文正文。",
           },
           {
             period: "11 世纪至今",
@@ -252,9 +252,9 @@ const timelineSystems = [
             tagZh: "苏鲁斯体",
             structureTags: ["大型标题", "宗教铭文", "曲线优雅", "装饰与权威"],
             titleFont: 'Georgia, "Times New Roman", serif',
-            summary: "如果说 Kufic 更偏早期纪念性，Thuluth 则更像中世纪以后大型标题、宗教铭文与庄严题写的经典形式。",
+            summary: "Thuluth 更接近中世纪以后大型标题、宗教铭文和庄严题写的经典形式。",
             origin:
-              "Britannica 将 Thuluth 描述为中世纪伊斯兰世界优雅的大型手写体，常用于古兰经章节标题、宗教铭文和王公题写。",
+              "它在中世纪伊斯兰世界逐渐稳定为一种优雅的大型手写体，长期服务于章节标题、宗教铭文和王公题写。",
             faces: "Aref Ruqaa、Amiri Quran、Noto Naskh Arabic",
             usage: "适合展陈标题、宗教文化项目、庄严题写和需要高仪式感的视觉场景。",
             caution: "它更偏大型展示与铭文传统，不能直接替代正文用的 Naskh 判断。",
@@ -290,7 +290,7 @@ const timelineSystems = [
             titleFont: 'Georgia, "Times New Roman", serif',
             summary: "Nastaliq 是波斯文传统里最具代表性的书写风格，明显不同于阿拉伯正文路径。",
             origin:
-              "Britannica 将其概括为 15 至 16 世纪波斯书法中的主导风格，传统上与 Mīr ʿAlī of Tabriz 相关，并常被描述为结合了 naskhī 与 taʿlīq 的特征。",
+              "它在 15 至 16 世纪的波斯书法中逐渐成为主导风格，可以理解为把 naskh 与 ta'liq 气质结合起来的一类形式。",
             faces: "IranNastaliq、Awami Nastaliq、Urdu Nastaliq Unicode",
             usage: "适合诗歌、文化出版、强调波斯书写气质的内容。",
             caution: "数字排版复杂度明显高于 Naskh，不适合直接拿来当默认通用正文。",
@@ -302,7 +302,7 @@ const timelineSystems = [
             tagZh: "现代波斯正文体",
             structureTags: ["现代正文", "报刊出版", "数字界面", "波斯语优化"],
             titleFont: 'Georgia, "Times New Roman", serif',
-            summary: "现代伊朗排印并不只剩 Nastaliq 一条线，面向报刊、书籍和界面的现代波斯正文体同样关键。",
+            summary: "现代伊朗排印不只有 Nastaliq，面向报刊、书籍和界面的现代波斯正文体同样关键。",
             origin:
               "随着现代出版、教育与数字产品扩大，波斯语逐步发展出更适合高密度阅读与界面使用的正文型和无衬线方案。",
             faces: "Vazirmatn、Tahoma、Noto Naskh Arabic",
@@ -315,7 +315,7 @@ const timelineSystems = [
         id: "ottoman",
         name: "奥斯曼帝国语境",
         role: "奥斯曼行政书写",
-        summary: "这一栏更准确地对应奥斯曼帝国晚期的土耳其语书写环境，而不是现代已经改用拉丁字母的土耳其共和国。",
+        summary: "这一栏对应的是奥斯曼帝国晚期的土耳其语书写环境，而不是现代已经改用拉丁字母的土耳其共和国。",
         highlight: "Ruq'ah、Ottoman calligraphy",
         focus: "看更快、更简洁的书写怎样影响后来标题和标识设计。",
         eras: [
@@ -327,7 +327,7 @@ const timelineSystems = [
             titleFont: "Helvetica, Arial, sans-serif",
             summary: "Ruq'ah 以快速、简洁和日常功能性强著称，是理解奥斯曼晚期行政与日常书写的重要入口。",
             origin:
-              "Ruq'ah 常被说明为在奥斯曼官署与日常文书中成熟起来的高效率书写形式，重点应放在奥斯曼行政语境，而不是把它直接当作现代土耳其国家字体传统。",
+              "它在奥斯曼官署与日常文书中逐渐成熟为一种高效率书写形式，重点应放在奥斯曼行政语境，而不是现代土耳其国家字体传统。",
             faces: "Aref Ruqaa、Rakkas、Katibeh",
             usage: "适合说明奥斯曼行政书写、手写传统，以及后来标题和标识中更亲近的阿拉伯视觉表达。",
             caution:
@@ -365,13 +365,13 @@ const timelineSystems = [
     name: "देवनागरी",
     caption: "天城文",
     summary:
-      "天城文不该套用西文 serif/sans 的思路，更适合按主要使用国家与文本场景理解，因为真正关键的是上横线、附标和连字 shaping。",
+      "天城文不适合直接套西文 serif/sans 的思路，更适合按使用国家和文本场景理解，因为真正决定可读性的往往是上横线、附标和连字 shaping。",
     featuredCountries: [
       {
         id: "india",
         name: "印度",
         role: "主流现代使用地",
-        summary: "印度是理解现代天城文字体最直接的入口，能看到出版、教育和界面三种需求怎样同时作用。",
+        summary: "印度是理解现代天城文字体最直接的入口，因为出版、教育和界面三种需求会同时作用在同一套字形上。",
         highlight: "Hindi、Marathi、出版与界面字体",
         focus: "先看长文可读性和 shaping 质量，而不是先找 serif/sans 标签。",
         eras: [
@@ -381,9 +381,9 @@ const timelineSystems = [
             tag: "Modern Devanagari",
             structureTags: ["上横线系统", "附标密集", "连字 shaping", "正文与界面并重"],
             titleFont: '"Noto Serif Devanagari", serif',
-            summary: "成熟期的 Devanagari 在 11 世纪后逐步定型，今天是多种印度语言的重要书写系统，重点在附标和连字质量。",
+            summary: "成熟期的 Devanagari 在 11 世纪后逐步定型，今天服务于多种印度语言，判断重点在附标、连字和整体节奏是否稳定。",
             origin:
-              "Britannica 将 Devanagari 溯源到 Gupta 和更早的 Brahmi 传统，并指出其成熟形态约在 11 世纪出现。",
+              "它通常被放回 Gupta 及更早的 Brahmi 传统里理解，成熟形态大约在 11 世纪以后逐步稳定下来。",
             faces: "Mukta、Hind、Kokila、Mangal",
             usage: "适合印地语、马拉地语等正文、界面与教育内容。",
             caution: "判断优劣时要先看附标定位、连字和字面节奏，而不只是看笔画风格。",
@@ -395,7 +395,7 @@ const timelineSystems = [
             tagZh: "现代展示天城文",
             structureTags: ["标题展示", "粗重节奏", "品牌传播", "界面标题"],
             titleFont: '"Noto Sans Devanagari", sans-serif',
-            summary: "除了正文型，现代印度项目也越来越依赖更适合标题、海报和品牌传播的展示型天城文。",
+            summary: "除了正文型，现代印度项目也越来越依赖更适合标题、海报和品牌传播的展示型天城文，它们通常更强调短文本冲击力。",
             origin:
               "广告、影视海报与数字产品把天城文从传统正文逻辑拉向更强对比、更高识别度和更适合短文本的展示方向。",
             faces: "Mukta、Hind、Noto Sans Devanagari",
@@ -408,7 +408,7 @@ const timelineSystems = [
         id: "nepal",
         name: "尼泊尔",
         role: "区域语言应用",
-        summary: "尼泊尔语的现代使用让我们看到同一书写系统在国家语境变化后会出现哪些阅读差异。",
+        summary: "尼泊尔语的现代使用能让我们看到，同一套书写系统进入不同国家语境后，会出现怎样的阅读差异和公共传播需求。",
         highlight: "Nepali、公共信息与教育字体",
         focus: "看语言环境变化如何影响词长、节奏和公共传播字体选择。",
         eras: [
@@ -419,9 +419,9 @@ const timelineSystems = [
             tagZh: "尼泊尔语天城文",
             structureTags: ["公共信息", "教育阅读", "区域变体", "高频实用"],
             titleFont: '"Noto Sans Devanagari", sans-serif',
-            summary: "尼泊尔语环境让天城文在公共信息和教育传播中形成了自己的实用侧重点。",
+            summary: "尼泊尔语环境让天城文在公共信息和教育传播中形成了更偏实用、稳定和高频阅读的侧重点。",
             origin:
-              "同样使用 Devanagari，但词汇、排版习惯和公共空间应用会带来不同的阅读反馈。",
+              "虽然同样使用 Devanagari，但词汇长度、排版习惯和公共空间应用会带来不同的阅读反馈。",
             faces: "Noto Sans Devanagari、Mukta、Kalimati",
             usage: "适合公共导视、教育与政府信息传播。",
             caution: "不要把印度常用字体默认当成所有天城文语境都同样合适。",
@@ -432,7 +432,7 @@ const timelineSystems = [
         id: "sanskrit",
         name: "梵语学术圈",
         role: "文化与学术传承",
-        summary: "梵语语境提醒我们，天城文不仅是现代信息工具，也是带有强烈文化权威性的学术载体。",
+        summary: "梵语语境提醒我们，天城文不仅是现代信息工具，也是带有强烈文化权威性和学术要求的文本载体。",
         highlight: "Sanskrit、传统文本排印",
         focus: "看古典文本需求怎样影响现代字体设计的细节可靠性。",
         eras: [
@@ -442,7 +442,7 @@ const timelineSystems = [
             tag: "Classical text tradition",
             structureTags: ["学术传承", "经典文本", "复杂附标", "校勘友好"],
             titleFont: '"Noto Serif Devanagari", serif',
-            summary: "学术语境要求 Devanagari 在复杂标记、注释和长文中保持高可靠性。",
+            summary: "学术语境要求 Devanagari 在复杂标记、注释和长文中保持高可靠性，重点不是风格，而是细节是否经得起校勘。",
             origin:
               "古典文本排印不仅要求可读，还要求在细微差别上足够稳定，便于校勘和学术引用。",
             faces: "Sanskrit 2003、Chandas、Noto Serif Devanagari",
@@ -476,7 +476,7 @@ const timelineSystems = [
             titleFont: 'Georgia, "Times New Roman", serif',
             summary: "宋体是中文正文印刷最核心的类型之一，也是理解现代中文阅读传统的起点。",
             origin:
-              "在今天的类型命名里，中文常称宋体，日文常称明朝体；这些名称相近，但具体字形与区域习惯并不完全相同。",
+              "今天的类型命名里，中文常称宋体，日文常称明朝体；名称接近，但具体字形和区域阅读习惯并不完全相同。",
             faces: "SimSun、Source Han Serif SC、Songti SC",
             usage: "适合图书、报刊、说明文本和正式长文内容。",
             caution: "中文阅读对灰度和字面很敏感，不同宋体在屏幕上表现差异很大。",
@@ -524,9 +524,9 @@ const timelineSystems = [
             tag: "Japanese Mincho",
             structureTags: ["汉字假名混排", "正文出版", "细腻留白", "文化杂志感"],
             titleFont: 'Georgia, "Times New Roman", serif',
-            summary: "明朝体在日本不仅是正文体，也是出版美学和文学气质的重要载体。",
+            summary: "明朝体在日本不仅是正文体，也是出版美学、文学气质和书刊文化的重要载体。",
             origin:
-              "Britannica 把 mincho 概括为大致相当于西文 roman 的日本正文字体，而汉字与假名混排又让它形成了自身的节奏控制方式。",
+              "Mincho 大致可以对应西文里的正文 roman，但汉字与假名混排让它发展出更细腻的节奏、留白和重心控制。",
             faces: "Yu Mincho、Hiragino Mincho、Source Han Serif JP",
             usage: "适合书刊、文学、品牌出版和需要文雅气质的长文。",
             caution: "如果假名设计不够细致，整体气质会立刻变差，不是只看汉字部分就够。",
@@ -537,9 +537,9 @@ const timelineSystems = [
             tag: "Japanese Gothic",
             structureTags: ["现代信息型", "标题友好", "混排稳定", "品牌常用"],
             titleFont: "Helvetica, Arial, sans-serif",
-            summary: "ゴシック体在日本既承担界面，也承担大量现代品牌与海报标题。",
+            summary: "ゴシック体在日本既承担界面，也承担大量现代品牌、包装和海报标题。",
             origin:
-              "现代传播和视觉设计让日本无衬线发展出比中文黑体更强调节奏控制的一面。",
+              "现代传播和视觉设计让日本无衬线发展出比中文黑体更强调节奏控制和混排稳定的一面。",
             faces: "Yu Gothic、Hiragino Sans、Source Han Sans JP",
             usage: "适合网页、海报、包装、品牌识别和界面。",
             caution: "同样叫无衬线，日文和中文版本不能直接混着理解或替换。",
@@ -551,9 +551,10 @@ const timelineSystems = [
             tagZh: "Typos 试验字型",
             structureTags: ["实验排印", "现代主义", "介于明朝与哥特之间", "杂志设计"],
             titleFont: "Helvetica, Arial, sans-serif",
-            summary: "Britannica 提到日本设计师在 1960 年代发展出第三种 Typos，它提醒我们日本排印并不只有明朝体和哥特体两极。",
+            summary:
+              "Typos 是日本现代主义排印里更实验的一支，也提醒我们日本字型并不只有明朝体和哥特体两极。",
             origin:
-              "Typos 更像现代主义设计语境下对既有日文字型秩序的一次重组，让标题与杂志设计拥有介于正文与无衬线之间的新语气。",
+              "它更像现代主义设计语境下对既有日文字型秩序的一次重组，让标题与杂志设计拥有介于正文与无衬线之间的新语气。",
             faces: "Tsukushi Mincho、Hiragino Sans、Yu Gothic",
             usage: "适合杂志设计、文化海报、书籍封面和需要现代实验感的日文项目。",
             caution: "它不是日本最常见的日常工作字型，更适合解释设计史与视觉语气，而不是默认系统字体。",
@@ -574,9 +575,9 @@ const timelineSystems = [
             tag: "Myeongjo",
             structureTags: ["韩文正文", "较强对比", "正式出版", "传统阅读感"],
             titleFont: 'Georgia, "Times New Roman", serif',
-            summary: "Myeongjo 对应韩文正文传统，是理解韩文正式阅读气质的基本入口。",
+            summary: "Myeongjo 对应韩文正文传统，是理解韩文正式阅读气质和出版节奏的基本入口。",
             origin:
-              "韩文印刷在现代出版中逐步形成自己的正文节奏；与中文、日文共享部分汉字文化圈资源，但韩文的结构逻辑并不相同。",
+              "韩文印刷在现代出版中逐步形成自己的正文节奏；虽然与中文、日文共享部分汉字文化圈资源，但韩文的结构逻辑并不相同。",
             faces: "Batang、Nanum Myeongjo、Noto Serif KR",
             usage: "适合图书、正式说明和文化出版。",
             caution: "韩文不是简单的 CJK 同类项，字腔和节奏判断要单独做。",
@@ -601,9 +602,9 @@ const timelineSystems = [
             tag: "Gothic Hangul",
             structureTags: ["界面主力", "现代品牌", "清晰阅读", "几何秩序"],
             titleFont: "Helvetica, Arial, sans-serif",
-            summary: "고딕체是韩文现代界面与品牌中最常见的无衬线体系。",
+            summary: "고딕체是韩文现代界面、品牌和导视中最常见的无衬线体系。",
             origin:
-              "数字界面和城市品牌传播推动韩文发展出一套强调清晰与节奏的现代字体方案。",
+              "数字界面和城市品牌传播推动韩文发展出一套同时强调清晰、节奏和块面平衡的现代字体方案。",
             faces: "Malgun Gothic、Noto Sans KR、Pretendard",
             usage: "适合 App、网页、品牌系统和导视。",
             caution: "韩文的块面密度和字距容忍度与中文、日文都不完全一样。",
@@ -617,14 +618,14 @@ const timelineSystems = [
     name: "Mainland Southeast Asia",
     caption: "东南亚大陆文字",
     summary:
-      "这里更准确地说是在讲东南亚大陆的婆罗米系衍生文字传统，而不是整个东南亚所有书写系统。泰文不该作为一级国家入口单独出现，它应放回与高棉、老挝、缅甸等文字并读的历史脉络中理解。",
+      "这里主要讲的是东南亚大陆的婆罗米系衍生文字传统，而不是整个东南亚所有书写系统。重点不只是分国家看，而是看同源文字如何在各地长出不同结构和阅读习惯。",
     featuredCountries: [
       {
         id: "thailand",
         name: "泰国",
         role: "泰文字母传统",
         summary:
-          "泰文字母属于婆罗米系在东南亚发展的一个分支，真正重要的入门点不是把它当国家标签看，而是先理解它在东南亚文字系统里的结构来源和现代分化。",
+          "泰文字母属于婆罗米系在东南亚发展的一个分支，入门重点不是国家标签，而是它的系统来源，以及后来如何分化出有头体和无头体。",
         highlight: "婆罗米系、古高棉影响、Looped、Loopless",
         focus: "先看泰文字母的系统来源，再看有头体和无头体在现代场景中的分工。",
         eras: [
@@ -635,9 +636,9 @@ const timelineSystems = [
             structureTags: ["婆罗米系", "东南亚分支", "古高棉关联", "字母系统来源"],
             titleFont: '"Noto Serif Thai", serif',
             summary:
-              "泰文字母不是独立悬空出现的，它属于婆罗米系文字在东南亚发展出来的一支。Britannica 将现代泰文字母概括为对更早书写系统的一种改造，并指出它通常被认为与高棉文字传统有关。",
+              "泰文字母不是孤立出现的，它属于婆罗米系文字在东南亚发展出来的一支，也常和更早的高棉文字传统一起理解。",
             origin:
-              "从更大的类型学上看，泰文字母应放回印度婆罗米系向东南亚传播和本地化演变的脉络中理解，而不是直接和拉丁、阿拉伯并列后停在国家标签上。",
+              "更关键的讲法，是把泰文字母放回婆罗米系向东南亚传播、再本地化演变的链条里理解，而不是只停在“泰国字体”这个国家标签上。",
             faces: "Noto Serif Thai、Kinnari、TH Sarabun",
             usage: "适合做东南亚文字系统入门、解释字母结构来源和区域传播脉络。",
             caution:
@@ -649,7 +650,7 @@ const timelineSystems = [
             tag: "Looped Thai",
             structureTags: ["带圈字头", "传统可读性", "教材出版常见", "结构辨识强"],
             titleFont: '"Noto Serif Thai", serif',
-            summary: "有头体是许多人最熟悉的泰文样貌，字头的小圈让字形辨识和阅读节奏更稳定。",
+            summary: "有头体是许多人最熟悉的泰文样貌，字头的小圈会明显影响辨识度和阅读节奏。",
             origin:
               "长期的出版、教育和正式阅读环境强化了有头体作为标准泰文外观的认知。",
             faces: "TH Sarabun、Browallia、Noto Serif Thai",
@@ -662,7 +663,7 @@ const timelineSystems = [
             tag: "Loopless Thai",
             structureTags: ["去圈简化", "现代界面感", "标题友好", "数字产品常见"],
             titleFont: '"Noto Sans Thai", sans-serif',
-            summary: "无头体把字头圈简化或去掉，让泰文在界面和广告里显得更现代、更紧凑。",
+            summary: "无头体把字头圈简化或去掉，让泰文在界面和广告里显得更现代、更紧凑，但也会改变原本的阅读提示。",
             origin:
               "随着数字界面、标识和品牌传播发展，设计师开始大量采用更简洁的无头体方案。",
             faces: "Sukhumvit Set、DB Helvethaica、Noto Sans Thai",
@@ -675,9 +676,9 @@ const timelineSystems = [
             tag: "Usage judgement",
             structureTags: ["场景判断", "正式与现代", "品牌语气", "跨文化误判"],
             titleFont: '"Noto Sans Thai", sans-serif',
-            summary: "今天的泰文选择常常不是谁替代谁，而是看场景在有头体和无头体之间做判断。",
+            summary: "今天的泰文字型选择更像场景判断：先分正式阅读还是现代传播，再决定偏有头还是偏无头。",
             origin:
-              "传统阅读习惯和现代视觉风格长期并存，所以真正的科普重点是解释何时该选哪一边。",
+              "传统阅读习惯和现代视觉风格长期并存，所以真正关键的是解释何时该偏正式、何时该偏现代。",
             faces: "TH Sarabun、Sukhumvit Set、Noto Sans Thai",
             usage: "适合做字体选型教学、品牌策略说明和跨文化设计判断。",
             caution: "如果把无头体简单等同于“更高级”，或把有头体当成“更老派”，都很容易误判。",
@@ -689,9 +690,9 @@ const timelineSystems = [
         name: "柬埔寨",
         role: "高棉字母传统",
         summary:
-          "理解东南亚文字时，高棉字母非常关键，因为它既保留了深厚的婆罗米系传播痕迹，也常被拿来和泰文、老挝文的结构来源一起看。",
+          "理解东南亚文字时，高棉字母非常关键，因为它既保留了深厚的婆罗米系传播痕迹，也能帮助解释泰文、老挝文等文字的结构来源。",
         highlight: "古高棉、婆罗米系、曲线结构、宗教与王朝文书",
-        focus: "把高棉放进区域史里看，能更清楚理解泰文为何常被说明与高棉传统有关。",
+        focus: "把高棉放进区域史里看，更容易理解泰文为何常和高棉传统一起被讨论。",
         eras: [
           {
             period: "7 - 13 世纪形成，沿用至今",
@@ -700,7 +701,7 @@ const timelineSystems = [
             structureTags: ["婆罗米系", "古高棉传统", "王朝文书", "区域关键节点"],
             titleFont: '"Noto Serif Khmer", serif',
             summary:
-              "高棉字母是东南亚最重要的书写传统之一，常被视为理解泰文、老挝文等区域文字演变时不可跳过的关键参照。",
+              "高棉字母是东南亚最重要的书写传统之一，也是理解周边文字演变时很难绕开的关键参照。",
             origin:
               "它源自婆罗米系向东南亚传播后的在地化发展，并在宗教、宫廷和碑刻传统中长期稳定使用。",
             faces: "Khmer OS、Noto Serif Khmer、MoolBoran",
@@ -716,9 +717,9 @@ const timelineSystems = [
             structureTags: ["曲线骨架", "高密度字面", "正文与标题差异", "数字化适配"],
             titleFont: '"Noto Sans Khmer", sans-serif',
             summary:
-              "现代高棉字体既要保留传统书写气质，也要适应屏幕阅读和品牌传播，因此常出现展示体与正文字体的明确分工。",
+              "现代高棉字体既要保留传统书写气质，也要适应屏幕阅读和品牌传播，所以正文与展示往往会明确分工。",
             origin:
-              "数字化环境推动设计师重新处理笔画密度、节奏和字面控制，让古典结构能在现代媒介里继续工作。",
+              "数字化环境推动设计师重新处理笔画密度、节奏和字面控制，让传统结构能在现代媒介里继续工作。",
             faces: "Noto Sans Khmer、Battambang、Kantumruy Pro",
             usage: "适合正文排版、文化展示、政府与教育资料，以及面向现代界面的高棉内容设计。",
             caution: "高棉字面和行距需求与拉丁体系差异很大，直接套西文排版参数容易出问题。",
@@ -730,7 +731,7 @@ const timelineSystems = [
         name: "老挝",
         role: "老挝字母传统",
         summary:
-          "老挝文字与泰文关系接近，但不应直接视作同一套系统的地区变体；它更常被说明为通过 Mon 传统进入区域传播后形成自己的历史路径、字形习惯和正式使用环境。",
+          "老挝文字与泰文关系接近，但不能直接当成同一套系统的地区变体；它有自己的历史路径、字形习惯和正式使用环境。",
         highlight: "Mon 传播、与泰文近缘、佛教文化、国家标准使用",
         focus: "先看它与泰文的近缘关系，再看老挝文在本地阅读习惯中的独立判断。",
         eras: [
@@ -741,9 +742,9 @@ const timelineSystems = [
             structureTags: ["婆罗米系", "Mon 传播链条", "与泰文近缘", "音节结构"],
             titleFont: '"Noto Serif Lao", serif',
             summary:
-              "老挝字母与泰文常被并列讨论，因为两者在历史来源和整体外观上有近缘关系，但老挝文仍有独立的规范和阅读经验。",
+              "老挝字母常和泰文并列讨论，因为两者在历史来源和整体外观上接近，但老挝文仍有自己的规范和阅读经验。",
             origin:
-              "更具体地说，Lao 常被放在婆罗米系经 Mon 传统传播后再分化的链条里理解；它和泰文有近缘关系，但不是互相替代的同一套字。",
+              "它通常被放在婆罗米系经 Mon 传统传播后再分化的链条里理解；和泰文近缘，但不是可以互相替代的同一套字。",
             faces: "Phetsarath OT、Noto Serif Lao、DokChampa",
             usage: "适合说明东南亚近缘文字如何共享源流、却在国家与语言使用上各自独立。",
             caution:
@@ -759,7 +760,7 @@ const timelineSystems = [
             summary:
               "现代老挝文字设计重点在于维持正文可读性，同时让字形在移动设备和公共信息系统里保持稳定辨识。",
             origin:
-              "随着数字产品、公共服务与教育场景扩展，老挝文字也逐渐形成更清楚的正文字体与界面字体使用分工。",
+              "随着数字产品、公共服务与教育场景扩展，老挝文字也逐渐形成更清楚的正文与界面字体分工。",
             faces: "Noto Sans Lao、Saysettha OT、Phetsarath OT",
             usage: "适合政府信息、教育内容、移动界面和区域语言比较展示。",
             caution: "近缘不代表可以共用同一套字体资源，细部结构和用户阅读习惯仍需要分别处理。",
@@ -771,7 +772,7 @@ const timelineSystems = [
         name: "缅甸",
         role: "缅文字母传统",
         summary:
-          "缅文字母同样属于婆罗米系，但更常被说明为通过 Mon 书写传统进入缅甸语环境后形成今天的系统；它视觉上比泰文、高棉文更圆润，能帮助用户看到同源系统如何发展出截然不同的面貌。",
+          "缅文字母同样属于婆罗米系，但它经由 Mon 书写传统进入缅甸语环境后形成了今天的系统；视觉上比泰文、高棉文更圆润，也更能看出同源系统如何长出不同面貌。",
         highlight: "Mon 传统、圆形骨架、宗教手稿、数字化复杂排版",
         focus: "看同源系统如何在书写材料、书写习惯和数字排版里发展出更强的圆形特征。",
         eras: [
@@ -782,9 +783,9 @@ const timelineSystems = [
             structureTags: ["婆罗米系", "Mon 传统", "圆形特征", "棕榈叶书写影响"],
             titleFont: '"Noto Serif Myanmar", serif',
             summary:
-              "缅文字母是东南亚书写系统里辨识度很高的一支，圆形化倾向非常明显，常被拿来说明书写材料如何反过来塑造字形结构。",
+              "缅文字母是东南亚书写系统里辨识度很高的一支，圆形化倾向非常明显，也最适合拿来说明书写材料如何反过来塑造字形结构。",
             origin:
-              "更具体地说，Burmese 常被放在婆罗米系经 Mon 文字传统进入当地后逐渐定型的路径里理解，并在手稿、宗教文本与行政使用中稳固出今天熟悉的视觉面貌。",
+              "它通常被放在婆罗米系经 Mon 文字传统进入当地后逐渐定型的路径里理解，并在手稿、宗教文本与行政使用中稳固出今天熟悉的视觉面貌。",
             faces: "Myanmar Text、Padauk、Noto Serif Myanmar",
             usage: "适合说明东南亚文字不仅有共同来源，也会因媒介与文化环境出现显著字形差异。",
             caution: "缅文的组合与排版复杂度较高，若只按西文或中日韩的经验处理，常会出现断行和显示问题。",
@@ -797,9 +798,9 @@ const timelineSystems = [
             structureTags: ["屏幕优化", "多层组合", "正文系统", "本地平台兼容"],
             titleFont: '"Noto Sans Myanmar", sans-serif',
             summary:
-              "缅文字体在数字环境里尤其依赖渲染与排版支持，因此现代字体设计常同时关注字形传统和技术兼容。",
+              "缅文字体在数字环境里尤其依赖渲染与排版支持，所以现代字体设计必须同时处理字形传统和技术兼容。",
             origin:
-              "移动设备普及后，缅文设计不再只是画字形，还要处理复杂组合、渲染稳定性和平台一致性。",
+              "移动设备普及后，缅文设计不再只是画字形，还要同时处理复杂组合、渲染稳定性和平台一致性。",
             faces: "Noto Sans Myanmar、Pyidaungsu、Padauk",
             usage: "适合新闻阅读、教育内容、政府系统和需要稳定显示的移动端界面。",
             caution: "如果技术栈对复杂脚本支持不足，再好的字形设计也可能在实际产品里失真。",
@@ -817,6 +818,7 @@ const tabsViewport = document.querySelector("#timelineTabsViewport");
 const prevButton = document.querySelector("#timelineScrollPrev");
 const nextButton = document.querySelector("#timelineScrollNext");
 const countryTabsRoot = document.querySelector("#countryTabs");
+const previewTextInput = document.querySelector("#previewTextInput");
 
 const tagZhLabels = {
   "Roman square capitals": "罗马方形大写字母（图拉真体）",
@@ -997,6 +999,7 @@ const activeCountryBySystem = Object.fromEntries(
 );
 
 let activeSystem = systemsWithOverview[0].id;
+let previewText = "";
 
 const localTitleValidators = {
   "arab-world": (title) => /[\u0600-\u06ff\u0750-\u077f\u08a0-\u08ff]/u.test(title),
@@ -1066,6 +1069,386 @@ function extractPrimaryFontLabel(fontFamily) {
   return firstFamily.replace(/^["']|["']$/g, "").trim();
 }
 
+function dedupeItems(items) {
+  return [...new Set(items.filter(Boolean))];
+}
+
+const curatedFaceExpansions = {
+  // Intentionally sparse: only add fonts when they are manually verified to belong
+  // to the same historical/system context as the era card.
+};
+
+const googleFontsFilterMap = {
+  "italy:Early roman type": {
+    lang: "en_Latn",
+    script: "Latn",
+    query: "garamond",
+    categoryFilter: "Serif:%2FSerif%2FOld+Style+Garalde",
+  },
+  "italy:Italic tradition": {
+    lang: "en_Latn",
+    script: "Latn",
+    query: "garamond italic",
+    categoryFilter: "Serif:%2FSerif%2FOld+Style+Garalde",
+  },
+  "france:Garalde tradition": {
+    lang: "en_Latn",
+    script: "Latn",
+    query: "garamond",
+    categoryFilter: "Serif:%2FSerif%2FOld+Style+Garalde",
+  },
+  "france:Modern serif": {
+    lang: "en_Latn",
+    script: "Latn",
+    query: "didot",
+    categoryFilter: "Serif:%2FSerif%2FDidone",
+  },
+  "france:Rationalized roman": {
+    lang: "en_Latn",
+    script: "Latn",
+    query: "baskerville",
+    categoryFilter: "Serif:%2FSerif%2FTransitional",
+  },
+  "germany:Roman / Antiqua": {
+    lang: "en_Latn",
+    script: "Latn",
+    query: "old style serif",
+    categoryFilter: "Serif:%2FSerif%2FOld+Style+Garalde",
+  },
+  "switzerland:Sans-serif": {
+    lang: "en_Latn",
+    script: "Latn",
+    query: "grotesk",
+    categoryFilter: "Sans+Serif:%2FSans%2FNeo+Grotesk",
+  },
+  "usa:Interface sans-serif": {
+    lang: "en_Latn",
+    script: "Latn",
+    query: "humanist sans",
+    categoryFilter: "Sans+Serif:%2FSans%2FHumanist",
+  },
+  "arab-world:Kufic": {
+    lang: "ar_Arab",
+    script: "Arab",
+    query: "kufi",
+  },
+  "arab-world:Thuluth": {
+    lang: "ar_Arab",
+    script: "Arab",
+    query: "thuluth",
+  },
+  "arab-world:Naskh": {
+    lang: "ar_Arab",
+    script: "Arab",
+    query: "naskh",
+  },
+  "iran:Modern Persian text": {
+    lang: "fa_Arab",
+    script: "Arab",
+    query: "persian text",
+  },
+  "ottoman:Ruq'ah": {
+    lang: "ar_Arab",
+    script: "Arab",
+    query: "ruqaa",
+  },
+  "india:Modern Devanagari": {
+    lang: "hi_Deva",
+    script: "Deva",
+    query: "devanagari serif",
+    categoryFilter: "Serif:%2FSerif%2F*",
+  },
+  "india:Display Devanagari": {
+    lang: "hi_Deva",
+    script: "Deva",
+    query: "devanagari sans",
+    categoryFilter: "Sans+Serif:%2FSans%2F*",
+  },
+  "nepal:Regional application": {
+    lang: "ne_Deva",
+    script: "Deva",
+    query: "devanagari sans",
+    categoryFilter: "Sans+Serif:%2FSans%2F*",
+  },
+  "sanskrit:Classical text tradition": {
+    lang: "hi_Deva",
+    script: "Deva",
+    query: "devanagari serif",
+    categoryFilter: "Serif:%2FSerif%2F*",
+  },
+  "japan:Japanese Mincho": {
+    lang: "ja_Jpan",
+    script: "Jpan",
+    query: "serif jp",
+    categoryFilter: "Serif:%2FSerif%2F*",
+  },
+  "japan:Japanese Gothic": {
+    lang: "ja_Jpan",
+    script: "Jpan",
+    query: "sans jp",
+    categoryFilter: "Sans+Serif:%2FSans%2F*",
+  },
+  "korea:Myeongjo": {
+    lang: "ko_Hang",
+    script: "Hang",
+    query: "serif kr",
+    categoryFilter: "Serif:%2FSerif%2F*",
+  },
+  "korea:Gothic Hangul": {
+    lang: "ko_Hang",
+    script: "Hang",
+    query: "sans kr",
+    categoryFilter: "Sans+Serif:%2FSans%2F*",
+  },
+  "thailand:Brahmic-derived script": {
+    lang: "th_Thai",
+    script: "Thai",
+    query: "thai serif",
+    categoryFilter: "Serif:%2FSerif%2F*",
+  },
+  "thailand:Looped Thai": {
+    lang: "th_Thai",
+    script: "Thai",
+    query: "thai serif",
+    categoryFilter: "Serif:%2FSerif%2F*",
+  },
+  "thailand:Loopless Thai": {
+    lang: "th_Thai",
+    script: "Thai",
+    query: "thai sans",
+    categoryFilter: "Sans+Serif:%2FSans%2F*",
+  },
+  "cambodia:Brahmic-derived script": {
+    lang: "km_Khmr",
+    script: "Khmr",
+    query: "khmer serif",
+    categoryFilter: "Serif:%2FSerif%2F*",
+  },
+  "cambodia:Regional application": {
+    lang: "km_Khmr",
+    script: "Khmr",
+    query: "khmer sans",
+    categoryFilter: "Sans+Serif:%2FSans%2F*",
+  },
+  "laos:Brahmic-derived script": {
+    lang: "lo_Laoo",
+    script: "Laoo",
+    query: "lao serif",
+    categoryFilter: "Serif:%2FSerif%2F*",
+  },
+  "laos:Regional application": {
+    lang: "lo_Laoo",
+    script: "Laoo",
+    query: "lao sans",
+    categoryFilter: "Sans+Serif:%2FSans%2F*",
+  },
+  "myanmar:Brahmic-derived script": {
+    lang: "my_Mymr",
+    script: "Mymr",
+    query: "myanmar serif",
+    categoryFilter: "Serif:%2FSerif%2F*",
+  },
+  "myanmar:Regional application": {
+    lang: "my_Mymr",
+    script: "Mymr",
+    query: "myanmar sans",
+    categoryFilter: "Sans+Serif:%2FSans%2F*",
+  },
+};
+
+const googleFontsFamilySearchMap = {
+  "Trajan Pro": "Cinzel",
+  "Marcellus SC": "Marcellus SC",
+  Jenson: "Cormorant Garamond",
+  Bembo: "Cormorant Garamond",
+  "Bembo Italic": "Cormorant Garamond italic",
+  Centaur: "Cormorant Garamond",
+  "Centaur Italic": "Cormorant Garamond italic",
+  Garamond: "EB Garamond",
+  Sabon: "EB Garamond",
+  "EB Garamond Italic": "EB Garamond italic",
+  Didot: "Bodoni Moda",
+  "HTF Didot": "Bodoni Moda",
+  "GFS Didot": "Bodoni Moda",
+  Fournier: "Spectral",
+  Kepler: "Spectral",
+  Walbaum: "Bodoni Moda",
+  "Fette Fraktur": "UnifrakturMaguntia",
+  "Walbaum-Fraktur": "UnifrakturMaguntia",
+  "Akzidenz-Grotesk": "neo grotesk",
+  "Breite Grotesk": "neo grotesk",
+  "Monotype Grotesque": "neo grotesk",
+  Helvetica: "neo grotesk",
+  Univers: "neo grotesk",
+  "Neue Haas Grotesk": "neo grotesk",
+  "News Gothic": "Libre Franklin",
+  Cheltenham: "Playfair Display",
+  "Franklin Gothic": "Libre Franklin",
+  "Trebuchet MS": "humanist sans",
+  "Segoe UI": "humanist sans",
+  "Aref Kufi": "Noto Kufi Arabic",
+  "Amiri Quran": "Amiri",
+  "Traditional Arabic": "Noto Naskh Arabic",
+  IranNastaliq: "nastaliq",
+  "Awami Nastaliq": "nastaliq",
+  "Urdu Nastaliq Unicode": "nastaliq",
+  "Jameel Noori Nastaleeq": "nastaliq",
+  "Mehr Nastaliq Web": "nastaliq",
+  "Urdu Typesetting": "nastaliq",
+  Kokila: "Noto Serif Devanagari",
+  Mangal: "Noto Sans Devanagari",
+  Kalimati: "Noto Sans Devanagari",
+  "Sanskrit 2003": "Noto Serif Devanagari",
+  Chandas: "Noto Serif Devanagari",
+  SimSun: "Noto Serif SC",
+  FangSong: "Noto Serif SC",
+  STFangsong: "Noto Serif SC",
+  "Source Han Serif SC": "Noto Serif SC",
+  "Songti SC": "Noto Serif SC",
+  SimHei: "Noto Sans SC",
+  "Microsoft YaHei": "Noto Sans SC",
+  "Source Han Sans SC": "Noto Sans SC",
+  "Yu Mincho": "Noto Serif JP",
+  "Tsukushi Mincho": "Noto Serif JP",
+  "Hiragino Mincho": "Noto Serif JP",
+  "Source Han Serif JP": "Noto Serif JP",
+  "Yu Gothic": "Noto Sans JP",
+  "Hiragino Sans": "Noto Sans JP",
+  "Source Han Sans JP": "Noto Sans JP",
+  Batang: "Noto Serif KR",
+  Gungsuh: "Noto Serif KR",
+  "Nanum Myeongjo": "Noto Serif KR",
+  "Malgun Gothic": "Noto Sans KR",
+  Pretendard: "Noto Sans KR",
+  Kinnari: "Noto Serif Thai",
+  "TH Sarabun": "Noto Serif Thai",
+  Browallia: "Noto Serif Thai",
+  "Sukhumvit Set": "Noto Sans Thai",
+  "DB Helvethaica": "Noto Sans Thai",
+  "Khmer OS": "Noto Serif Khmer",
+  MoolBoran: "Noto Serif Khmer",
+  Battambang: "Noto Sans Khmer",
+  "Phetsarath OT": "Noto Serif Lao",
+  DokChampa: "Noto Serif Lao",
+  "Saysettha OT": "Noto Sans Lao",
+  "Myanmar Text": "Noto Serif Myanmar",
+  Padauk: "Noto Serif Myanmar",
+  Pyidaungsu: "Noto Sans Myanmar",
+};
+
+const googleFontsLocaleMap = {
+  latin: { lang: "en_Latn", script: "Latn" },
+  "arab-world": { lang: "ar_Arab", script: "Arab" },
+  iran: { lang: "fa_Arab", script: "Arab" },
+  ottoman: { lang: "ar_Arab", script: "Arab" },
+  urdu: { lang: "ur_Arab", script: "Arab" },
+  india: { lang: "hi_Deva", script: "Deva" },
+  nepal: { lang: "ne_Deva", script: "Deva" },
+  sanskrit: { lang: "sa_Deva", script: "Deva" },
+  china: { lang: "zh_Hans", script: "Hans" },
+  japan: { lang: "ja_Jpan", script: "Jpan" },
+  korea: { lang: "ko_Hang", script: "Hang" },
+  thailand: { lang: "th_Thai", script: "Thai" },
+  cambodia: { lang: "km_Khmr", script: "Khmr" },
+  laos: { lang: "lo_Laoo", script: "Laoo" },
+  myanmar: { lang: "my_Mymr", script: "Mymr" },
+};
+
+function getEraKey(country, era) {
+  return `${country.id}:${era.tagRaw || era.tag || era.title}`;
+}
+
+function normalizeFontSearchLabel(label) {
+  return label
+    .replace(/^["']|["']$/g, "")
+    .replace(/\b(Pro|MT|OT|UI)\b/gi, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function getEraStyleCategory(era) {
+  const titleFont = era.titleFont || "";
+  const tone = `${era.tagRaw || era.tag || ""} ${era.title || ""}`.toLowerCase();
+
+  if (
+    /fraktur|textura|nastaliq|ruqaa|monumentalis|display|blackletter|kufi|calligraph/i.test(
+      tone,
+    )
+  ) {
+    return "display";
+  }
+
+  if (
+    /sans-serif|sans|grotesk|gothic|interface|ui|screen|hei|neo-grotesk|neue grotesk/i.test(
+      titleFont,
+    ) ||
+    /grotesk|sans|interface|screen|gothic|hei/i.test(tone)
+  ) {
+    return "sans";
+  }
+
+  return "serif";
+}
+
+function getEraFaceEnhancements(era, country) {
+  return curatedFaceExpansions[getEraKey(country, era)] || [];
+}
+
+function getEraFaceLabels(era, country) {
+  return dedupeItems([...createFaceItems(era.faces), ...getEraFaceEnhancements(era, country)]);
+}
+
+function getGoogleFontsBrowseContext(era, country) {
+  const filter = googleFontsFilterMap[getEraKey(country, era)] || {};
+  const locale = googleFontsLocaleMap[country.id] || googleFontsLocaleMap.latin;
+  const queryCandidates = dedupeItems([
+    filter.query,
+    ...getEraFaceLabels(era, country).map(
+      (label) => googleFontsFamilySearchMap[label] || normalizeFontSearchLabel(label),
+    ),
+    googleFontsFamilySearchMap[extractPrimaryFontLabel(era.titleFont || "")],
+    normalizeFontSearchLabel(extractPrimaryFontLabel(era.titleFont || "")),
+    googleFontsFamilySearchMap[era.tagRaw || era.tag || era.title],
+    normalizeFontSearchLabel(era.tagRaw || era.tag || era.title || ""),
+  ]).filter(Boolean);
+  const query = queryCandidates[0];
+
+  if (!query) {
+    return null;
+  }
+
+  const preview = getPreviewTitleText(era);
+  const params = [
+    `lang=${filter.lang || locale.lang}`,
+    `script=${filter.script || locale.script}`,
+  ];
+
+  if (query) {
+    params.push(`query=${encodeURIComponent(query)}`);
+  }
+
+  if (filter.categoryFilter) {
+    params.push(`categoryFilters=${filter.categoryFilter}`);
+  } else if ((filter.script || locale.script) === "Latn") {
+    const styleCategory = getEraStyleCategory(era);
+
+    if (styleCategory === "sans") {
+      params.push("categoryFilters=Sans+Serif:%2FSans%2F*");
+    } else if (styleCategory === "serif") {
+      params.push("categoryFilters=Serif:%2FSerif%2F*");
+    }
+  }
+
+  if (preview) {
+    params.push(`preview.text=${encodeURIComponent(preview)}`);
+  }
+
+  return {
+    url: `https://fonts.google.com/?${params.join("&")}`,
+    label: "查看更多",
+  };
+}
+
 function getPreviewFontFamily(label, fallbackFamily = "") {
   if (fontPreviewStacks[label]) {
     return fontPreviewStacks[label];
@@ -1133,7 +1516,7 @@ function getFallbackPreviewWeight(optionIndex, titleText) {
   };
   const scale = weightScales[category] || weightScales.latin;
 
-  return scale[(optionIndex - 1) % scale.length];
+  return scale[optionIndex % scale.length];
 }
 
 function getPreviewFontWeight(label, optionIndex, titleText) {
@@ -1174,7 +1557,7 @@ function getFallbackPreviewLetterSpacing(optionIndex, titleText) {
   }
 
   const spacings = ["0.03em", "-0.01em", "0.015em", "0.05em"];
-  return spacings[(optionIndex - 1) % spacings.length];
+  return spacings[optionIndex % spacings.length];
 }
 
 function getPreviewLetterSpacing(label, optionIndex, titleText) {
@@ -1207,10 +1590,10 @@ function getPreviewLetterSpacing(label, optionIndex, titleText) {
   return getFallbackPreviewLetterSpacing(optionIndex, titleText);
 }
 
-function createFaceOptions(era) {
+function createFaceOptions(era, country, titleText = era.title) {
   const options = [];
 
-  createFaceItems(era.faces).forEach((label) => {
+  getEraFaceLabels(era, country).forEach((label) => {
     if (options.some((option) => option.label === label)) {
       return;
     }
@@ -1221,8 +1604,8 @@ function createFaceOptions(era) {
       label,
       fontFamily: getPreviewFontFamily(label, era.titleFont),
       fontStyle: getPreviewFontStyle(label),
-      fontWeight: getPreviewFontWeight(label, optionIndex, era.title),
-      letterSpacing: getPreviewLetterSpacing(label, optionIndex, era.title),
+      fontWeight: getPreviewFontWeight(label, optionIndex, titleText),
+      letterSpacing: getPreviewLetterSpacing(label, optionIndex, titleText),
     });
   });
 
@@ -1265,6 +1648,125 @@ function getTitleScriptClass(text) {
   return "";
 }
 
+function getPreviewTitleText(era) {
+  return previewText.trim() || era.title;
+}
+
+function applyTitleFaceStyles(element, face) {
+  element.style.fontFamily = face.fontFamily;
+  element.style.fontStyle = face.fontStyle;
+  element.style.fontWeight = face.fontWeight;
+  element.style.letterSpacing = face.letterSpacing;
+}
+
+function createTextNode(tagName, className, text) {
+  const element = document.createElement(tagName);
+
+  if (className) {
+    element.className = className;
+  }
+
+  element.textContent = text;
+  return element;
+}
+function createFaceChip(face, index, titleElement, facesRoot) {
+  const chip = document.createElement("button");
+  chip.className = "era-face";
+  chip.type = "button";
+  chip.textContent = face.label;
+  chip.style.fontFamily = face.fontFamily;
+  chip.style.fontStyle = face.fontStyle;
+  chip.style.fontWeight = face.fontWeight;
+  chip.style.letterSpacing = face.letterSpacing;
+  chip.setAttribute("aria-pressed", index === 0 ? "true" : "false");
+
+  if (index === 0) {
+    chip.classList.add("active");
+  }
+
+  chip.addEventListener("click", () => {
+    applyTitleFaceStyles(titleElement, face);
+
+    facesRoot.querySelectorAll(".era-face").forEach((button) => {
+      button.classList.remove("active");
+      button.setAttribute("aria-pressed", "false");
+    });
+
+    chip.classList.add("active");
+    chip.setAttribute("aria-pressed", "true");
+  });
+
+  return chip;
+}
+
+function createStructureTag(tag) {
+  const chip = document.createElement("span");
+  chip.className = "era-structure-tag";
+  chip.textContent = tag;
+  return chip;
+}
+
+function createMoreFontsLink(era, country) {
+  const browseContext = getGoogleFontsBrowseContext(era, country);
+
+  if (!browseContext) {
+    return null;
+  }
+
+  const link = document.createElement("a");
+  link.className = "era-face era-face-more";
+  link.href = browseContext.url;
+  link.target = "_blank";
+  link.rel = "noreferrer";
+  link.textContent = browseContext.label;
+  link.setAttribute("aria-label", `${browseContext.label}（Google Fonts）`);
+  return link;
+}
+
+function createEraCard(era, country) {
+  const fragment = template.content.cloneNode(true);
+  const tagsRoot = fragment.querySelector(".era-structure-tags");
+  const facesRoot = fragment.querySelector(".faces");
+  const rawTag = fragment.querySelector(".era-tag-raw");
+  const zhTag = fragment.querySelector(".era-tag-zh");
+  const titleElement = fragment.querySelector(".era-title");
+  const zhLabel = era.tagZh || tagZhLabels[era.tagRaw || era.tag] || "";
+  const previewTitle = getPreviewTitleText(era);
+  const titleScriptClass = getTitleScriptClass(previewTitle);
+  const faceOptions = createFaceOptions(era, country, previewTitle);
+  const initialFace = faceOptions[0];
+
+  fragment.querySelector(".era-period").textContent = era.period;
+  rawTag.textContent = era.tag;
+  zhTag.textContent = zhLabel;
+  zhTag.hidden = !zhLabel;
+  titleElement.textContent = previewTitle;
+  applyTitleFaceStyles(titleElement, initialFace);
+
+  if (titleScriptClass) {
+    titleElement.classList.add(titleScriptClass);
+  }
+
+  fragment.querySelector(".overview").textContent = createOverviewText(era);
+  fragment.querySelector(".caution").textContent = era.caution;
+
+  faceOptions.forEach((face, index) => {
+    facesRoot.appendChild(createFaceChip(face, index, titleElement, facesRoot));
+  });
+
+  const moreFontsLink = createMoreFontsLink(era, country);
+
+  if (moreFontsLink) {
+    facesRoot.appendChild(moreFontsLink);
+  }
+
+  era.structureTags.forEach((tag) => {
+    tagsRoot.appendChild(createStructureTag(tag));
+  });
+
+  return fragment;
+}
+
 function renderTimelineTabs() {
   tabsRoot.innerHTML = "";
 
@@ -1303,16 +1805,13 @@ function renderCountryTabs() {
   system.featuredCountries.forEach((country) => {
     const button = document.createElement("button");
     const name = document.createElement("span");
-    const role = document.createElement("span");
 
     button.className = `country-tab${country.id === activeCountry.id ? " active" : ""}`;
     button.type = "button";
     name.className = "country-tab-name";
-    role.className = "country-tab-role";
     name.textContent = country.name;
-    role.textContent = country.role;
 
-    button.append(name, role);
+    button.append(name);
     button.addEventListener("click", () => {
       activeCountryBySystem[system.id] = country.id;
       renderCountryTabs();
@@ -1329,75 +1828,7 @@ function renderEraCards() {
   erasRoot.innerHTML = "";
 
   country.eras.forEach((era) => {
-    const fragment = template.content.cloneNode(true);
-    const tagsRoot = fragment.querySelector(".era-structure-tags");
-    const facesRoot = fragment.querySelector(".faces");
-    const rawTag = fragment.querySelector(".era-tag-raw");
-    const zhTag = fragment.querySelector(".era-tag-zh");
-    const zhLabel = era.tagZh || tagZhLabels[era.tagRaw || era.tag] || "";
-
-    fragment.querySelector(".era-period").textContent = era.period;
-    rawTag.textContent = era.tag;
-    zhTag.textContent = zhLabel;
-    zhTag.hidden = !zhLabel;
-    const titleElement = fragment.querySelector(".era-title");
-    const titleScriptClass = getTitleScriptClass(era.title);
-    const faceOptions = createFaceOptions(era);
-    const initialFace = faceOptions[0];
-
-    titleElement.textContent = era.title;
-    titleElement.style.fontFamily = initialFace.fontFamily;
-    titleElement.style.fontStyle = initialFace.fontStyle;
-    titleElement.style.fontWeight = initialFace.fontWeight;
-    titleElement.style.letterSpacing = initialFace.letterSpacing;
-
-    if (titleScriptClass) {
-      titleElement.classList.add(titleScriptClass);
-    }
-    fragment.querySelector(".overview").textContent = createOverviewText(era);
-    fragment.querySelector(".caution").textContent = era.caution;
-
-    faceOptions.forEach((face, index) => {
-      const chip = document.createElement("button");
-      chip.className = "era-face";
-      chip.type = "button";
-      chip.textContent = face.label;
-      chip.style.fontFamily = face.fontFamily;
-      chip.style.fontStyle = face.fontStyle;
-      chip.style.fontWeight = face.fontWeight;
-      chip.style.letterSpacing = face.letterSpacing;
-      chip.setAttribute("aria-pressed", index === 0 ? "true" : "false");
-
-      if (index === 0) {
-        chip.classList.add("active");
-      }
-
-      chip.addEventListener("click", () => {
-        titleElement.style.fontFamily = face.fontFamily;
-        titleElement.style.fontStyle = face.fontStyle;
-        titleElement.style.fontWeight = face.fontWeight;
-        titleElement.style.letterSpacing = face.letterSpacing;
-
-        facesRoot.querySelectorAll(".era-face").forEach((button) => {
-          button.classList.remove("active");
-          button.setAttribute("aria-pressed", "false");
-        });
-
-        chip.classList.add("active");
-        chip.setAttribute("aria-pressed", "true");
-      });
-
-      facesRoot.appendChild(chip);
-    });
-
-    era.structureTags.forEach((tag) => {
-      const chip = document.createElement("span");
-      chip.className = "era-structure-tag";
-      chip.textContent = tag;
-      tagsRoot.appendChild(chip);
-    });
-
-    erasRoot.appendChild(fragment);
+    erasRoot.appendChild(createEraCard(era, country));
   });
 }
 
@@ -1422,6 +1853,11 @@ prevButton?.addEventListener("click", () => scrollTabs(-1));
 nextButton?.addEventListener("click", () => scrollTabs(1));
 tabsViewport.addEventListener("scroll", updateScrollButtons);
 window.addEventListener("resize", updateScrollButtons);
+
+previewTextInput?.addEventListener("input", (event) => {
+  previewText = event.currentTarget.value;
+  renderEraCards();
+});
 
 renderTimelineTabs();
 renderCountryTabs();

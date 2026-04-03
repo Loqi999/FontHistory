@@ -47,7 +47,7 @@ body::before {
 
 .timeline {
   position: relative;
-  overflow: hidden;
+  overflow: visible;
   background: var(--paper);
   border: 1px solid var(--line);
   border-radius: 28px;
@@ -109,12 +109,76 @@ body::before {
   color: var(--muted);
 }
 
+.controls-dock {
+  position: sticky;
+  top: 10px;
+  z-index: 20;
+  margin-top: 18px;
+  padding: 10px 0 14px;
+}
+
+.controls-dock::before {
+  content: "";
+  position: absolute;
+  inset: 0 -14px;
+  border-radius: 20px;
+  background: rgba(255, 252, 247, 0.82);
+  border: 1px solid var(--line);
+  box-shadow:
+    0 10px 24px rgba(59, 43, 19, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.58);
+  backdrop-filter: blur(12px);
+  pointer-events: none;
+}
+
+.controls-dock::after {
+  content: "";
+  position: absolute;
+  left: -14px;
+  right: -14px;
+  bottom: -10px;
+  height: 28px;
+  background: linear-gradient(180deg, rgba(247, 242, 234, 0.32), rgba(247, 242, 234, 0));
+  pointer-events: none;
+}
+
 .timeline-controls {
-  margin-top: 22px;
+  position: relative;
+  display: grid;
+  gap: 10px;
+}
+
+.controls-row {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.controls-row-primary {
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.controls-group {
+  min-width: 0;
+}
+
+.controls-group-primary {
+  flex: 1 1 auto;
 }
 
 .timeline-tabs-shell {
   display: block;
+  position: relative;
+}
+
+.timeline-tabs-shell::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 1px;
+  background: var(--line);
+  pointer-events: none;
 }
 
 .timeline-tabs-viewport {
@@ -130,91 +194,192 @@ body::before {
 
 .timeline-tabs {
   display: flex;
-  gap: 10px;
+  gap: 4px;
   flex-wrap: nowrap;
   width: max-content;
+  padding-bottom: 6px;
 }
 
 .timeline-tab {
-  border: 1px solid var(--line);
-  background: rgba(255, 252, 247, 0.8);
+  position: relative;
+  border: 1px solid transparent;
+  background: transparent;
   color: var(--ink);
-  padding: 12px 16px;
-  border-radius: 20px;
+  padding: 8px 12px 10px;
+  border-radius: 12px 12px 0 0;
   cursor: pointer;
   font: inherit;
   display: grid;
-  gap: 4px;
+  gap: 2px;
   text-align: left;
   min-width: 132px;
+  transition:
+    transform 160ms ease,
+    border-color 160ms ease,
+    background-color 160ms ease,
+    color 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.timeline-tab:hover {
+  color: rgba(112, 52, 21, 0.9);
+  background: rgba(255, 252, 247, 0.72);
+}
+
+.timeline-tab::after {
+  content: "";
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 2px;
+  height: 2px;
+  border-radius: 999px;
+  background: var(--accent);
+  opacity: 0;
+  transform: scaleX(0.4);
+  transform-origin: left center;
+  transition:
+    opacity 160ms ease,
+    transform 160ms ease;
 }
 
 .timeline-tab-title {
-  font-size: 1.05rem;
+  font-size: 0.94rem;
   font-weight: 800;
-  line-height: 1.15;
+  line-height: 1.1;
 }
 
 .timeline-tab-caption {
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   color: var(--muted);
-  line-height: 1.2;
+  line-height: 1.1;
 }
 
 .timeline-tab.active {
-  background: var(--ink);
-  color: #fff9f2;
-  border-color: var(--ink);
+  background: transparent;
+  color: rgba(112, 52, 21, 0.98);
 }
 
 .timeline-tab.active .timeline-tab-caption {
-  color: rgba(255, 249, 242, 0.74);
+  color: rgba(121, 76, 5, 0.72);
+}
+
+.timeline-tab.active::after {
+  opacity: 1;
+  transform: scaleX(1);
 }
 
 .country-board {
-  margin-top: 20px;
+  display: grid;
+  gap: 6px;
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
 }
 
 .country-tabs {
   display: flex;
   flex-wrap: wrap;
-  gap: 16px;
+  gap: 8px;
 }
 
 .country-tab {
   border: 1px solid var(--line);
-  background: rgba(255, 249, 242, 0.86);
+  background: rgba(255, 252, 247, 0.82);
   color: var(--ink);
-  padding: 14px 16px;
-  border-radius: 18px;
+  padding: 7px 11px;
+  border-radius: 999px;
   cursor: pointer;
   font: inherit;
-  display: grid;
-  gap: 4px;
-  text-align: left;
-  min-width: 180px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-width: 0;
+  transition:
+    transform 160ms ease,
+    border-color 160ms ease,
+    background-color 160ms ease,
+    color 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.country-tab:hover {
+  border-color: var(--line);
+  background: rgba(255, 252, 247, 0.92);
 }
 
 .country-tab.active {
-  background: var(--ink);
-  color: #fff9f2;
-  border-color: var(--ink);
+  background: rgba(255, 247, 238, 0.96);
+  color: rgba(112, 52, 21, 0.98);
+  border-color: rgba(157, 60, 34, 0.18);
 }
 
 .country-tab-name {
-  font-size: 1rem;
+  font-size: 0.82rem;
   font-weight: 800;
-  line-height: 1.2;
+  line-height: 1;
+  white-space: nowrap;
 }
 
-.country-tab-role {
-  font-size: 0.8rem;
-  color: var(--muted);
-  line-height: 1.2;
+.preview-input-panel {
+  display: grid;
+  flex: 0 0 min(320px, 27vw);
 }
 
-.country-tab.active .country-tab-role {
-  color: rgba(255, 249, 242, 0.74);
+.preview-input-wrap {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  min-height: 44px;
+  padding: 4px;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  background: rgba(255, 252, 247, 0.82);
+}
+
+.preview-input-prefix {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  min-height: 36px;
+  padding: 0 10px;
+  border-radius: 10px;
+  background: rgba(255, 249, 242, 0.86);
+  color: var(--accent);
+  font-family: var(--display);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.preview-text-input {
+  width: 100%;
+  min-height: 36px;
+  padding: 0 10px;
+  border-radius: 10px;
+  border: 0;
+  background: transparent;
+  color: var(--ink);
+  font: inherit;
+  font-size: 0.88rem;
+  line-height: 1.3;
+}
+
+.preview-text-input::placeholder {
+  color: rgba(109, 101, 92, 0.72);
+}
+
+.preview-text-input:focus {
+  outline: none;
+}
+
+.preview-input-wrap:focus-within {
+  border-color: rgba(157, 60, 34, 0.24);
+  box-shadow: 0 0 0 4px rgba(157, 60, 34, 0.05);
 }
 
 .era-details dt {
@@ -386,6 +551,7 @@ body::before {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  align-items: stretch;
 }
 
 .era-info-card-faces {
@@ -396,20 +562,23 @@ body::before {
 }
 
 .era-face {
-  display: inline-flex;
+  display: inline-grid;
+  grid-auto-flow: column;
   align-items: center;
   justify-content: center;
-  min-height: 34px;
-  padding: 7px 12px;
+  min-height: 38px;
+  padding: 0 14px;
   border-radius: 12px;
   background: rgba(53, 42, 25, 0.05);
   border: 1px solid rgba(53, 42, 25, 0.08);
   color: var(--ink);
   font-weight: 700;
-  line-height: 1.35;
+  line-height: 1;
+  vertical-align: middle;
   cursor: pointer;
   font: inherit;
   text-align: center;
+  white-space: nowrap;
   appearance: none;
   transition:
     background-color 160ms ease,
@@ -427,6 +596,21 @@ body::before {
   background: var(--ink);
   border-color: var(--ink);
   color: #fff9f2;
+}
+
+.era-face-more {
+  background: rgba(157, 60, 34, 0.06);
+  border-color: rgba(157, 60, 34, 0.14);
+  color: var(--accent);
+  text-decoration: none;
+  font-family: var(--body) !important;
+  font-style: normal !important;
+  font-weight: 700 !important;
+  letter-spacing: 0 !important;
+}
+
+.era-face-more:hover {
+  border-color: rgba(157, 60, 34, 0.24);
 }
 
 .era-structure-tag {
@@ -450,6 +634,15 @@ body::before {
 
   .section-credit {
     margin-top: -6px;
+  }
+
+  .controls-row-primary {
+    flex-direction: column;
+  }
+
+  .preview-input-panel {
+    flex-basis: auto;
+    width: 100%;
   }
 
   .country-tabs {
@@ -488,10 +681,42 @@ body::before {
     margin: 10px auto 40px;
   }
 
+  .controls-dock {
+    top: 8px;
+    padding: 8px 0 12px;
+  }
+
+  .controls-dock::before {
+    inset: 0 -8px;
+    border-radius: 18px;
+  }
+
+  .controls-dock::after {
+    left: -8px;
+    right: -8px;
+  }
+
   .timeline {
     border-radius: 22px;
     padding-left: 16px;
     padding-right: 16px;
+  }
+
+  .timeline-controls {
+  }
+
+  .timeline-tab,
+  .country-tab {
+    min-width: 100%;
+  }
+
+  .preview-input-wrap {
+    min-height: 52px;
+  }
+
+  .preview-input-prefix {
+    min-width: 46px;
+    min-height: 42px;
   }
 
   .era-grid {
