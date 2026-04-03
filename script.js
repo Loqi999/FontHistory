@@ -1082,7 +1082,61 @@ function getPreviewFontStyle(label) {
   return /italic/i.test(label) ? "italic" : "normal";
 }
 
-function getPreviewFontWeight(label) {
+function getTitleScriptCategory(text) {
+  if (/[\u0600-\u06ff\u0750-\u077f\u08a0-\u08ff]/u.test(text)) {
+    return "arabic";
+  }
+
+  if (/[\u0900-\u097f]/u.test(text)) {
+    return "devanagari";
+  }
+
+  if (/[\u0e00-\u0e7f]/u.test(text)) {
+    return "thai";
+  }
+
+  if (/[\u1780-\u17ff]/u.test(text)) {
+    return "khmer";
+  }
+
+  if (/[\u0e80-\u0eff]/u.test(text)) {
+    return "lao";
+  }
+
+  if (/[\u1000-\u109f\uaa60-\uaa7f]/u.test(text)) {
+    return "myanmar";
+  }
+
+  if (/[\u1100-\u11ff\u3130-\u318f\uac00-\ud7af]/u.test(text)) {
+    return "hangul";
+  }
+
+  if (/[\u3040-\u30ff\u3400-\u9fff\uf900-\ufaff]/u.test(text)) {
+    return "cjk";
+  }
+
+  return "latin";
+}
+
+function getFallbackPreviewWeight(optionIndex, titleText) {
+  const category = getTitleScriptCategory(titleText);
+  const weightScales = {
+    latin: ["700", "500", "800", "400"],
+    cjk: ["700", "500", "800", "400"],
+    hangul: ["700", "500", "800", "400"],
+    arabic: ["700", "500", "800", "400"],
+    devanagari: ["700", "500", "800", "400"],
+    thai: ["700", "500", "800", "400"],
+    khmer: ["700", "500", "800", "400"],
+    lao: ["700", "500", "800", "400"],
+    myanmar: ["700", "500", "800", "400"],
+  };
+  const scale = weightScales[category] || weightScales.latin;
+
+  return scale[(optionIndex - 1) % scale.length];
+}
+
+function getPreviewFontWeight(label, optionIndex, titleText) {
   const weightedPresets = {
     "Trajan Pro": "700",
     Cinzel: "700",
@@ -1109,10 +1163,21 @@ function getPreviewFontWeight(label) {
     return weightedPresets[label];
   }
 
-  return "600";
+  return getFallbackPreviewWeight(optionIndex, titleText);
 }
 
-function getPreviewLetterSpacing(label) {
+function getFallbackPreviewLetterSpacing(optionIndex, titleText) {
+  const category = getTitleScriptCategory(titleText);
+
+  if (category !== "latin") {
+    return "0em";
+  }
+
+  const spacings = ["0.03em", "-0.01em", "0.015em", "0.05em"];
+  return spacings[(optionIndex - 1) % spacings.length];
+}
+
+function getPreviewLetterSpacing(label, optionIndex, titleText) {
   const spacedPresets = {
     "Trajan Pro": "0.06em",
     Cinzel: "0.04em",
@@ -1139,7 +1204,7 @@ function getPreviewLetterSpacing(label) {
     return spacedPresets[label];
   }
 
-  return "0em";
+  return getFallbackPreviewLetterSpacing(optionIndex, titleText);
 }
 
 function createFaceOptions(era) {
@@ -1159,12 +1224,14 @@ function createFaceOptions(era) {
       return;
     }
 
+    const optionIndex = options.length;
+
     options.push({
       label,
       fontFamily: getPreviewFontFamily(label, era.titleFont),
       fontStyle: getPreviewFontStyle(label),
-      fontWeight: getPreviewFontWeight(label),
-      letterSpacing: getPreviewLetterSpacing(label),
+      fontWeight: getPreviewFontWeight(label, optionIndex, era.title),
+      letterSpacing: getPreviewLetterSpacing(label, optionIndex, era.title),
     });
   });
 
